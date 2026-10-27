@@ -1,0 +1,2332 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>لوح الحروف</title>
+<style>
+@font-face{font-family:"Amiri";font-style:normal;font-weight:400;font-display:block;src:url("fonts/amiri-arabic-400-normal.woff2") format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC}
+@font-face{font-family:"Amiri";font-style:normal;font-weight:400;font-display:block;src:url("fonts/amiri-latin-400-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Amiri";font-style:normal;font-weight:700;font-display:block;src:url("fonts/amiri-arabic-700-normal.woff2") format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC}
+@font-face{font-family:"Amiri";font-style:normal;font-weight:700;font-display:block;src:url("fonts/amiri-latin-700-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"IBM Plex Sans Arabic";font-style:normal;font-weight:400;font-display:block;src:url("fonts/ibm-plex-sans-arabic-arabic-400-normal.woff2") format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC}
+@font-face{font-family:"IBM Plex Sans Arabic";font-style:normal;font-weight:400;font-display:block;src:url("fonts/ibm-plex-sans-arabic-latin-400-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"IBM Plex Sans Arabic";font-style:normal;font-weight:500;font-display:block;src:url("fonts/ibm-plex-sans-arabic-arabic-500-normal.woff2") format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC}
+@font-face{font-family:"IBM Plex Sans Arabic";font-style:normal;font-weight:500;font-display:block;src:url("fonts/ibm-plex-sans-arabic-latin-500-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"IBM Plex Sans Arabic";font-style:normal;font-weight:600;font-display:block;src:url("fonts/ibm-plex-sans-arabic-arabic-600-normal.woff2") format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC}
+@font-face{font-family:"IBM Plex Sans Arabic";font-style:normal;font-weight:600;font-display:block;src:url("fonts/ibm-plex-sans-arabic-latin-600-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"IBM Plex Sans Arabic";font-style:normal;font-weight:700;font-display:block;src:url("fonts/ibm-plex-sans-arabic-arabic-700-normal.woff2") format("woff2");unicode-range:U+0600-06FF,U+0750-077F,U+0870-088E,U+0890-0891,U+0897-08E1,U+08E3-08FF,U+200C-200E,U+2010-2011,U+204F,U+2E41,U+FB50-FDFF,U+FE70-FE74,U+FE76-FEFC}
+@font-face{font-family:"IBM Plex Sans Arabic";font-style:normal;font-weight:700;font-display:block;src:url("fonts/ibm-plex-sans-arabic-latin-700-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+[hidden]{display:none!important}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;-webkit-user-select:none;user-select:none}
+</style>
+</head>
+<body>
+<style>
+/* Layout: one column. A wooden lawh (Quranic-school slate) holds the word as separate letter tiles plus the joined word; raised, pressable letter keys below. */
+:root{
+  --bg:#eceef5; --surface:#ffffff; --ink:#1b1f3a; --muted:#5d6380; --line:#d3d7e6;
+  --key-edge:#c3c8dc; --indigo:#2f3f9e; --indigo-edge:#1f2b75; --indigo-soft:#e1e5f8;
+  --wood:#c99a5f; --wood-dark:#9a6c38; --wood-ink:#2a1a0c; --slate:#f3e3c4; --slate-edge:#b98a52;
+  --ok:#1f8a55; --ok-edge:#136a3f; --ok-soft:#d9f2e4;
+  --near:#d9a21b; --near-edge:#a87a0c; --near-soft:#faefcf;
+  --miss:#8a8fa6; --miss-edge:#6a6f86; --warn:#9c4f16;
+  --f-display:"Amiri","Noto Naskh Arabic","Traditional Arabic",serif;
+  --f-ui:"IBM Plex Sans Arabic","Segoe UI",Tahoma,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e1124; --surface:#1a1e3a; --ink:#e9ebf7; --muted:#a3a8c6; --line:#2c3159;
+  --key-edge:#0b0e20; --indigo:#7f8eff; --indigo-edge:#4f5cc7; --indigo-soft:#232a57;
+  --wood:#8b6236; --wood-dark:#5c3d1d; --wood-ink:#fff3df; --slate:#3c2a17; --slate-edge:#20150a;
+  --ok:#3fbf7f; --ok-edge:#1f7a4d; --ok-soft:#143626;
+  --near:#e3b23c; --near-edge:#9b7517; --near-soft:#3a2f10;
+  --miss:#5a5f7a; --miss-edge:#3a3e55; --warn:#f0a868; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1124; --surface:#1a1e3a; --ink:#e9ebf7; --muted:#a3a8c6; --line:#2c3159;
+  --key-edge:#0b0e20; --indigo:#7f8eff; --indigo-edge:#4f5cc7; --indigo-soft:#232a57;
+  --wood:#8b6236; --wood-dark:#5c3d1d; --wood-ink:#fff3df; --slate:#3c2a17; --slate-edge:#20150a;
+  --ok:#3fbf7f; --ok-edge:#1f7a4d; --ok-soft:#143626;
+  --near:#e3b23c; --near-edge:#9b7517; --near-soft:#3a2f10;
+  --miss:#5a5f7a; --miss-edge:#3a3e55; --warn:#f0a868; color-scheme:dark}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);font-size:15px;line-height:1.4;overflow:hidden;
+  padding-left:max(10px,env(safe-area-inset-left,0px));padding-right:max(10px,env(safe-area-inset-right,0px));padding-block:8px}
+.app{height:100%;max-width:520px;max-height:900px;margin:0 auto;display:flex;flex-direction:column;gap:8px;min-height:0}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none;-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+button:focus-visible{outline:3px solid var(--indigo);outline-offset:2px}
+.key{background:var(--surface);border:1px solid var(--line);border-bottom:4px solid var(--key-edge);border-radius:11px;transition:transform .07s,border-bottom-width .07s}
+.key:active{transform:translateY(3px);border-bottom-width:1px}
+.key:disabled{opacity:.35;cursor:default;transform:none;border-bottom-width:4px}
+
+/* top bar */
+.top{display:flex;align-items:center;gap:6px;flex:none}
+.top h1{font-family:var(--f-display);font-size:22px;margin:0;line-height:1;white-space:nowrap}
+.levels{display:flex;gap:4px;margin-inline-start:auto;direction:rtl}
+.lvl{width:36px;height:38px;font-weight:700;font-size:16px;font-variant-numeric:tabular-nums;padding:0}
+.lvl[aria-pressed="true"]{background:var(--indigo);border-color:var(--indigo);border-bottom-color:var(--indigo-edge);color:#fff}
+.icon-btn{width:38px;height:38px;display:grid;place-items:center;padding:0;position:relative}
+.icon-btn svg{width:20px;height:20px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.streak{height:38px;display:flex;align-items:center;gap:2px;padding:0 8px;font-weight:700;font-size:15px;font-variant-numeric:tabular-nums;color:var(--muted)}
+.streak svg{width:20px;height:20px;fill:var(--miss);stroke:none}
+.streak.lit{color:var(--ink)} .streak.lit svg{fill:#e8742a}
+.streak.bump{animation:bump .5s ease-out}
+@keyframes bump{40%{transform:scale(1.25)}}
+.lvl.locked{color:var(--muted);background:var(--bg)}
+.lvl.locked svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.lvl.fresh{animation:bump .6s ease-out 3}
+.stars{display:flex;justify-content:center;gap:6px;direction:rtl;height:34px}
+.stars svg{width:32px;height:32px}
+.stars .on{fill:var(--near);stroke:var(--near-edge)}
+.stars .off{fill:var(--line);stroke:var(--line)}
+.stars svg.on{animation:starpop .35s cubic-bezier(.2,1.6,.4,1) both}
+@keyframes starpop{from{transform:scale(0) rotate(-40deg)}to{transform:none}}
+.extra-line{font-size:13px;font-weight:600;color:var(--indigo);margin:2px 0 0}
+.chip small{font-family:var(--f-ui);font-size:10px;color:var(--near-edge);margin-inline-start:4px}
+.toggle{display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-size:14px;text-align:start}
+@media (max-width:400px){.top h1{display:none}}
+.badge{position:absolute;top:-6px;inset-inline-start:-6px;background:var(--ok);color:#fff;font-size:10px;font-weight:700;border-radius:999px;padding:0 5px;line-height:16px;font-variant-numeric:tabular-nums}
+
+/* clue */
+.clue{flex:none;background:var(--indigo-soft);border-radius:12px;padding:6px 10px;display:flex;align-items:center;gap:8px;min-height:44px}
+.clue p{margin:0;flex:1;min-width:0;font-family:var(--f-display);font-size:18px;line-height:1.35}
+.clue p small{font-family:var(--f-ui);font-size:11px;font-weight:600;color:var(--indigo);display:block}
+.clue button{color:var(--indigo);font-weight:600;font-size:12px;padding:6px 4px;white-space:nowrap}
+
+/* lawh */
+.lawh{flex:none;position:relative;margin-top:8px;background:
+  repeating-linear-gradient(93deg,transparent 0 22px,rgba(0,0,0,.04) 22px 23px,transparent 23px 47px),
+  linear-gradient(180deg,var(--wood),var(--wood-dark));
+  border-radius:16px 16px 20px 20px;padding:14px 10px 10px;color:var(--wood-ink);
+  box-shadow:inset 0 2px 0 rgba(255,255,255,.18),inset 0 -4px 0 rgba(0,0,0,.2);display:flex;flex-direction:column;gap:4px;align-items:center}
+.lawh::before{content:"";position:absolute;top:-10px;left:50%;transform:translateX(-50%);width:46px;height:20px;background:linear-gradient(180deg,var(--wood),var(--wood-dark));border-radius:12px 12px 0 0}
+.lawh::after{content:"";position:absolute;top:-4px;left:50%;transform:translateX(-50%);width:10px;height:10px;border-radius:50%;background:var(--bg)}
+.lawh.shake{animation:shake .38s}
+@keyframes shake{25%{transform:translateX(7px)}50%{transform:translateX(-7px)}75%{transform:translateX(4px)}}
+.word{font-family:var(--f-display);font-size:clamp(34px,6.5vh,50px);line-height:1.45;text-align:center;height:clamp(52px,9vh,74px);direction:rtl;display:flex;align-items:center}
+.word.empty{font-size:15px;font-family:var(--f-ui);opacity:.85}
+.lrow{display:flex;align-items:center;gap:8px;width:100%;justify-content:center}
+.cells{display:flex;gap:6px;direction:rtl;justify-content:center}
+.cell{width:clamp(40px,11vw,52px);height:clamp(44px,6.8vh,58px);border-radius:9px;background:var(--slate);border-bottom:4px solid var(--slate-edge);display:grid;place-items:center;
+  font-family:var(--f-display);font-size:clamp(24px,4.2vh,32px);line-height:1;color:var(--wood-ink)}
+.cell.empty{background:rgba(0,0,0,.12);border-bottom-color:rgba(0,0,0,.18)}
+.cell.pend{outline:2px dashed var(--wood-ink);outline-offset:-4px;opacity:.85}
+.cell.ok{background:var(--ok);border-bottom-color:var(--ok-edge);color:#fff}
+.cell.near{background:var(--near);border-bottom-color:var(--near-edge);color:#241800}
+.cell.miss{background:var(--miss);border-bottom-color:var(--miss-edge);color:#fff}
+.cell.flip{animation:flip .42s ease-in-out both}
+@keyframes flip{0%{transform:rotateX(0)}50%{transform:rotateX(90deg)}100%{transform:rotateX(0)}}
+.cell.pop{animation:pop .16s ease-out}
+@keyframes pop{0%{transform:scale(.7)}100%{transform:scale(1)}}
+.undo{width:40px;height:40px;display:grid;place-items:center;padding:0;background:var(--slate);border-color:transparent;border-bottom-color:var(--slate-edge);flex:none}
+.undo svg{width:20px;height:20px;stroke:var(--wood-ink);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.msg{height:18px;text-align:center;font-size:13px;font-weight:600;color:var(--wood-ink);opacity:.9}
+
+/* harakat bar */
+.harakat{flex:none;display:grid;grid-template-columns:repeat(5,1fr);gap:6px;height:clamp(52px,8.5vh,70px)}
+.hk{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0;border-color:var(--indigo);border-bottom-color:var(--indigo-edge)}
+.hk .g{font-family:var(--f-display);font-size:clamp(26px,4.4vh,36px);line-height:1.15}
+.hk .n{font-size:10px;color:var(--muted);line-height:1}
+.hk .n{white-space:nowrap}
+.hk.sh{border-color:var(--near-edge);border-bottom-color:var(--near-edge)}
+.hk.sh[aria-pressed="true"]{background:var(--near);color:#241800}
+.hk.sh[aria-pressed="true"] .n{color:#241800}
+.harakat.idle .hk{border-color:var(--line);border-bottom-color:var(--key-edge)}
+
+/* keyboard fills the rest */
+.board{flex:1;min-height:0;display:grid;grid-template-columns:repeat(7,1fr);grid-auto-rows:1fr;gap:5px;direction:rtl}
+.tile{min-width:0;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0;overflow:hidden}
+.tile .g{font-family:var(--f-display);font-size:clamp(20px,4vh,32px);line-height:1.1}
+.tile .n{font-size:8.5px;color:var(--muted);white-space:nowrap;line-height:1}
+.tile.x{background:var(--indigo-soft)}
+.tile[aria-pressed="true"]{background:var(--indigo);border-color:var(--indigo);border-bottom-color:var(--indigo-edge);color:#fff}
+.tile[aria-pressed="true"] .n{color:inherit}
+@media (max-height:640px){.tile .n{display:none}}
+
+/* sheets */
+.sheet{position:fixed;inset:0;z-index:20;display:flex;align-items:flex-end;justify-content:center;background:rgba(8,10,30,.35);
+  padding:0 max(10px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(10px,env(safe-area-inset-left,0px))}
+.card{width:100%;max-width:520px;max-height:80vh;overflow:auto;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:16px;
+  box-shadow:0 18px 50px rgba(10,14,40,.3);display:flex;flex-direction:column;gap:4px;text-align:center;animation:up .3s cubic-bezier(.2,1.4,.4,1)}
+@keyframes up{from{transform:translateY(60px) scale(.96);opacity:0}to{transform:none;opacity:1}}
+.card .tag{align-self:center;font-size:12px;font-weight:700;padding:2px 12px;border-radius:999px;background:var(--ok-soft);color:var(--ok)}
+.card .tag.old{background:var(--indigo-soft);color:var(--indigo)}
+.card .w{font-family:var(--f-display);font-size:56px;line-height:1.5}
+.card .m{font-family:var(--f-display);font-size:22px;line-height:1.6;margin:0}
+.card .m + .m{border-top:1px dashed var(--line);padding-top:6px}
+.acts{display:flex;gap:8px;margin-top:10px}
+.acts button{flex:1;padding:11px;font-weight:600}
+.next{background:var(--indigo)!important;border-color:var(--indigo)!important;border-bottom-color:var(--indigo-edge)!important;color:#fff}
+.card h2{margin:0;font-size:17px}
+.card .sum{color:var(--muted);font-size:13px;font-variant-numeric:tabular-nums;margin:0 0 6px}
+.lv-h{font-size:13px;font-weight:700;color:var(--muted);text-align:start;margin:8px 0 2px;display:flex;justify-content:space-between}
+.lv-h span{font-weight:400;font-variant-numeric:tabular-nums}
+.chips{display:flex;flex-wrap:wrap;gap:6px;direction:rtl}
+.chip{font-family:var(--f-display);font-size:19px;padding:0 11px;line-height:1.65;border-radius:999px;border-bottom-width:3px}
+.none{color:var(--muted);font-size:13px;margin:0;text-align:start}
+.help{font-size:13px;color:var(--muted);text-align:start;margin:10px 0 0;line-height:1.6}
+.confetti{position:fixed;inset:0;pointer-events:none;z-index:30}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<div class="app" dir="rtl" lang="ar">
+  <div class="top">
+    <h1>لوح الحروف</h1>
+    <div class="levels" id="levels" role="group" aria-label="عدد الحروف"></div>
+    <button class="icon-btn key" id="wordsBtn" aria-label="كلماتي"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 19V5M19 19v2H6"/></svg><span class="badge" id="badge"></span></button>
+    <button class="streak key" id="streak" aria-label="الأيام المتتالية"><svg viewBox="0 0 24 24"><path d="M12 2c1 4 5 6 5 11a5 5 0 0 1-10 0c0-2.5 1.2-4 2.5-5.2.3 1.7 1 2.7 2.2 3.2C11 8 11.5 5 12 2z"/></svg><span id="streakN">٠</span></button>
+  </div>
+
+  <section class="clue">
+    <p><small>ابنِ كلمةً معناها</small><span id="clueText"></span></p>
+    <button id="hint">تلميح</button>
+    <button id="skip">غيرها</button>
+  </section>
+
+  <section class="lawh" id="lawh" aria-live="polite">
+    <div class="word" id="word"></div>
+    <div class="lrow">
+      <div class="cells" id="cells"></div>
+      <button class="undo key" id="undo" aria-label="حذف حرف"><svg viewBox="0 0 24 24"><path d="M9 6h11v12H9l-6-6z"/><path d="M12 10l4 4M16 10l-4 4"/></svg></button>
+    </div>
+    <div class="msg" id="msg"></div>
+  </section>
+
+  <div class="harakat idle" id="harakat"></div>
+  <div class="board" id="board"></div>
+</div>
+
+<canvas class="confetti" id="confetti" aria-hidden="true"></canvas>
+<div class="sheet" id="sheet" hidden>
+  <div class="card" role="dialog" aria-modal="true" aria-label="الكلمة">
+    <span class="tag" id="tag">كلمة جديدة</span>
+    <div class="w" id="cardWord"></div>
+    <div class="stars" id="stars" aria-label="النجوم"></div>
+    <div id="cardMeanings"></div>
+    <p class="extra-line" id="extraLine" hidden></p>
+    <div class="acts">
+      <button class="key" id="speakBtn" hidden>استمع</button>
+      <button class="key next" id="nextBtn">تابع</button>
+    </div>
+  </div>
+</div>
+<div class="sheet" id="wordsSheet" hidden>
+  <div class="card" role="dialog" aria-modal="true" aria-label="كلماتي">
+    <h2>كلماتي</h2>
+    <p class="sum" id="sum"></p>
+    <div id="wordsList"></div>
+    <div class="toggle"><span>الصوت</span><button class="icon-btn key" id="sound" aria-label="كتم الصوت" aria-pressed="true"></button></div>
+    <p class="help">طريقة اللعب: اضغط حرفًا ثم اختر حركته. حروف المدّ (ا و ي) في وسط الكلمة لها السكون. للحرف المشدَّد اضغط «شدّة» ثم الحركة، مثل فَّ في تُفَّاح. حركة الحرف الأخير لا تُشترط. ثلاث نجوم من أوّل محاولة، ونجمتان إن غيّرتَ الحركة، ونجمة إن استعملتَ التلميح. اجمع ١٥ كلمة لتفتح المستوى التالي، وابنِ كلمةً كلَّ يوم لتحافظ على سلسلتك. الأخضر صحيح، والأصفر يعني غيّر الحركة، والرمادي يعني لا توجد كلمة.</p>
+    <div class="acts"><button class="key next" id="closeWords">رجوع</button></div>
+  </div>
+</div>
+
+<script>
+const DATA = `
+أَب|الوالِدُ
+أَخ|ابنُ أبيكَ وأمِّكَ
+يَد|عُضْوٌ نُمسِكُ به الأشياءَ
+دَم|سائلٌ أحمرُ يجري في الجِسْمِ
+فَم|عُضْوٌ نأكلُ ونتكلّمُ به
+مَنْ|نسألُ به عن الشخصِ
+هُوَ|ضميرٌ للغائبِ المذكَّرِ
+هِيَ|ضميرٌ للغائبةِ المؤنَّثةِ
+قُمْ|أمرٌ بالقيامِ
+نَمْ|أمرٌ بالنومِ
+صُمْ|أمرٌ بالصيامِ
+قُلْ|أمرٌ بالكلامِ
+زُرْ|أمرٌ بالزيارةِ
+خُذْ|أمرٌ بالأخذِ
+كُلْ|أمرٌ بالأكلِ
+سِرْ|أمرٌ بالمشيِ
+لَمْ|حرفُ نفيٍ للماضي
+عَنْ|حرفُ جرٍّ
+مِنْ|حرفُ جرٍّ يدلُّ على البدايةِ
+فِي|حرفُ جرٍّ بمعنى داخلَ
+لَا|حرفُ نفيٍ
+مَا|نسألُ به عن الشيءِ
+يَا|حرفُ نداءٍ
+ذَا|اسمُ إشارةٍ للقريبِ
+بَلْ|حرفٌ بمعنى لكنْ
+كَتَبَ|خطَّ الكلامَ بالقلمِ
+ذَهَبَ|مضى وسارَ
+ذَهَب|معدنٌ ثمينٌ أصفرُ
+جَلَسَ|قعدَ
+خَرَجَ|ضدُّ دخلَ
+دَخَلَ|ضدُّ خرجَ
+فَتَحَ|ضدُّ أغلقَ
+شَرِبَ|تناولَ الماءَ ونحوَه
+فَهِمَ|عرفَ وأدركَ
+سَمِعَ|أدركَ الصوتَ بأُذُنِه
+عَلِمَ|عرفَ
+عِلْم|المعرفةُ
+حَمِدَ|شكرَ وأثنى
+رَجَعَ|عادَ
+نَصَرَ|أعانَ وساعدَ
+قَرُبَ|دنا، ضدُّ بعُدَ
+بَعُدَ|ضدُّ قرُبَ
+كَبُرَ|صارَ كبيرًا
+صَغُرَ|صارَ صغيرًا
+لَعِبَ|لها ومرحَ
+رَكِبَ|علا الدابّةَ أو السيارةَ
+نَزَلَ|هبطَ من أعلى
+صَعِدَ|طلعَ إلى أعلى
+غَسَلَ|نظّفَ بالماءِ
+طَبَخَ|أنضجَ الطعامَ على النارِ
+زَرَعَ|وضعَ البذورَ في الأرضِ
+حَصَدَ|قطعَ الزرعَ بعد نضجِه
+رَسَمَ|صوّرَ بالقلمِ
+سَجَدَ|وضعَ جبهتَه على الأرضِ
+صَبَرَ|تحمّلَ ولم يجزعْ
+شَكَرَ|قالَ: جزاكَ اللهُ خيرًا
+حَفِظَ|استظهرَ عن قلبٍ، أو صانَ
+نَظَرَ|رأى بعينِه
+ضَحِكَ|ضدُّ بكى
+فَرِحَ|سُرَّ وابتهجَ
+حَزِنَ|ضدُّ فرحَ
+عَمِلَ|فعلَ واشتغلَ
+سَكَنَ|أقامَ في بيتٍ
+وَقَفَ|قامَ ولم يمشِ
+وَجَدَ|لقيَ الشيءَ
+وَصَلَ|بلغَ المكانَ
+حَمَلَ|رفعَ الشيءَ
+حَمَل|صغيرُ الغنمِ
+جَمَعَ|ضمَّ الأشياءَ بعضَها إلى بعضٍ
+قَطَعَ|فصلَ الشيءَ
+كَسَرَ|هشّمَ
+مَسَحَ|أزالَ الشيءَ بيدِه
+لَبِسَ|ارتدى الثوبَ
+هَرَبَ|فرَّ
+سَبَحَ|عامَ في الماءِ
+طَلَبَ|سألَ وأرادَ
+قَالَ|تكلّمَ
+نَامَ|رقدَ ونعسَ
+قَامَ|نهضَ ووقفَ
+صَامَ|أمسكَ عن الطعامِ والشرابِ
+زَارَ|أتى لرؤيةِ أحدٍ
+بَاعَ|ضدُّ اشترى
+طَارَ|حلّقَ في السماءِ
+عَاشَ|كانَ حيًّا
+جَاعَ|احتاجَ إلى الطعامِ
+خَافَ|فزعَ
+بَحْر|ماءٌ كثيرٌ مالحٌ
+نَهْر|ماءٌ عذبٌ جارٍ
+قَلَم|أداةُ الكتابةِ
+بَيْت|مكانُ السَّكَنِ
+بَاب|مدخلُ البيتِ
+كَلْب|حيوانٌ يحرسُ البيتَ
+قَلْب|عضوٌ يضخُّ الدمَ
+شَمْس|نجمٌ يضيءُ النهارَ
+قَمَر|يضيءُ في الليلِ
+نَجْم|يلمعُ في السماءِ ليلًا
+لَيْل|ضدُّ النهارِ
+يَوْم|نهارٌ وليلةٌ
+عَيْن|عضوُ البصرِ
+أُذُن|عضوُ السمعِ
+أَنْف|عضوُ الشمِّ
+بَطْن|ما تحتَ الصدرِ من الجسمِ
+ظَهْر|خلفُ الجسمِ
+ظُهْر|وقتُ منتصفِ النهارِ
+رِجْل|عضوُ المشيِ
+بَقَر|حيوانٌ يعطينا الحليبَ
+غَنَم|الضأنُ والمَعْزُ
+جَمَل|حيوانُ الصحراءِ
+فَرَس|الحِصانُ
+أَسَد|ملكُ الغابةِ
+نَمِر|حيوانٌ مفترسٌ مُرقَّطٌ
+فِيل|حيوانٌ ضخمٌ له خرطومٌ
+قِرْد|حيوانٌ يتسلّقُ الأشجارَ
+دِيك|ذكرُ الدجاجِ
+سَمَك|يعيشُ في الماءِ
+طَيْر|حيوانٌ له جناحانِ
+نَحْل|حشرةٌ تصنعُ العسلَ
+نَمْل|حشرةٌ صغيرةٌ تعيشُ جماعاتٍ
+ثَوْب|لباسٌ
+خُبْز|طعامٌ يُصنَعُ من الدقيقِ
+لَحْم|طعامٌ من الحيوانِ
+لَبَن|الحليبُ
+عَسَل|شرابٌ حلوٌ يصنعُه النحلُ
+تَمْر|ثمرُ النخلِ
+مَوْز|فاكهةٌ صفراءُ طويلةٌ
+عِنَب|فاكهةٌ في عناقيدَ
+ثَلْج|ماءٌ متجمّدٌ أبيضُ
+مَطَر|ماءٌ ينزلُ من السحابِ
+نَار|لهبٌ يحرقُ
+نُور|الضوءُ
+رِيح|الهواءُ المتحرّكُ
+جَبَل|أرضٌ مرتفعةٌ جدًّا
+سَهْل|أرضٌ منبسطةٌ، أو ضدُّ صعبٍ
+وَرْد|زهرٌ جميلُ الرائحةِ
+شَجَر|نباتٌ له ساقٌ وأغصانٌ
+زَهْر|نَوْرُ النباتِ
+عُشْب|نباتٌ أخضرُ قصيرٌ
+رَمْل|ترابٌ ناعمٌ في الصحراءِ
+حَجَر|صخرٌ صغيرٌ صلبٌ
+دَرْس|ما يتعلّمُه الطالبُ
+سُوق|مكانُ البيعِ والشراءِ
+دَار|البيتُ
+قَصْر|بيتٌ كبيرٌ فخمٌ
+سَيْف|سلاحٌ حادٌّ طويلٌ
+مَلِك|حاكمُ البلادِ
+بِنْت|الفتاةُ
+وَلَد|الصبيُّ
+رَجُل|الذكرُ البالغُ
+شَيْخ|الرجلُ الكبيرُ في السنِّ
+طِفْل|الصغيرُ من الناسِ
+خَيْر|ضدُّ الشرِّ
+صِدْق|قولُ الحقِّ
+كَذِب|ضدُّ الصدقِ
+عَدْل|الإنصافُ
+ظُلْم|ضدُّ العدلِ
+حَرْب|قتالٌ
+صُبْح|أوّلُ النهارِ
+عَصْر|آخرُ النهارِ
+فَجْر|ضوءُ الصباحِ الأوّلُ
+شَهْر|ثلاثونَ يومًا تقريبًا
+عَام|السنةُ
+دِين|ما يعبدُ به الإنسانُ ربَّه
+قَوْم|جماعةٌ من الناسِ
+أَرْض|ما نمشي عليه
+صَيْف|فصلُ الحرِّ
+بَرْد|ضدُّ الحرِّ
+نَوْم|الرُّقادُ
+سَفَر|الانتقالُ من بلدٍ إلى بلدٍ
+بَصَل|نباتٌ يُطبَخُ، يُدمِعُ العينَ
+جَزَر|نباتٌ برتقاليٌّ يُؤكلُ
+مِلْح|يُعطي الطعامَ طعمًا
+زَيْت|سائلٌ يُطبَخُ به
+شَرْق|جهةُ طلوعِ الشمسِ
+غَرْب|جهةُ غروبِ الشمسِ
+وَسَط|بينَ الطرفينِ
+فَوْق|ضدُّ تحتَ
+تَحْت|ضدُّ فوقَ
+خَلْف|ضدُّ أمامَ
+كِتَاب|أوراقٌ مكتوبةٌ نقرؤها
+صَدِيق|مَن تحبُّه ويحبُّك
+طَرِيق|ما نمشي فيه
+سَلَام|الأمنُ، وتحيّةُ المسلمينَ
+كُرْسِي|ما نجلسُ عليه
+مَكْتَب|مكانُ الكتابةِ والعملِ
+مَسْجِد|بيتُ الصلاةِ
+مَلْعَب|مكانُ اللعبِ
+مَطْبَخ|مكانُ الطبخِ
+مَنْزِل|البيتُ
+مَصْنَع|مكانُ صناعةِ الأشياءِ
+مَطْعَم|مكانُ الأكلِ
+مَخْبَز|مكانُ صنعِ الخبزِ
+مَدْرَسَ|—
+جَمِيل|حَسَنُ المنظرِ
+كَبِير|ضدُّ صغيرٍ
+صَغِير|ضدُّ كبيرٍ
+طَوِيل|ضدُّ قصيرٍ
+قَصِير|ضدُّ طويلٍ
+كَثِير|ضدُّ قليلٍ
+قَلِيل|ضدُّ كثيرٍ
+سَعِيد|فَرِحٌ مسرورٌ
+بَعِيد|ضدُّ قريبٍ
+قَرِيب|ضدُّ بعيدٍ
+جَدِيد|ضدُّ قديمٍ
+قَدِيم|ضدُّ جديدٍ
+سَرِيع|ضدُّ بطيءٍ
+ثَقِيل|ضدُّ خفيفٍ
+خَفِيف|ضدُّ ثقيلٍ
+نَظِيف|ضدُّ وسخٍ
+ضَعِيف|ضدُّ قويٍّ
+كَرِيم|كثيرُ العطاءِ
+رَحِيم|كثيرُ الرحمةِ
+عَظِيم|كبيرُ الشأنِ
+حَكِيم|صاحبُ الحكمةِ
+صَبُور|كثيرُ الصبرِ
+شَكُور|كثيرُ الشكرِ
+رَسُول|مَن يحملُ رسالةً
+أَرْنَب|حيوانٌ له أذنانِ طويلتانِ
+ثَعْلَب|حيوانٌ ماكرٌ
+عَقْرَب|حشرةٌ تلدغُ بذيلِها
+ضِفْدَع|حيوانٌ يقفزُ ويعيشُ قربَ الماءِ
+حِمَار|حيوانٌ يحملُ الأثقالَ
+غُرَاب|طائرٌ أسودُ
+حِصَان|الفرسُ
+خَرُوف|ذكرُ الضأنِ
+فُنْدُق|مكانُ نزولِ المسافرينَ
+قَمِيص|ثوبٌ يُلبَسُ على الجسمِ
+خَاتَم|حَلْقةٌ تُلبَسُ في الإصبعِ
+دِرْهَم|قطعةٌ من النقودِ
+فُلْفُل|نباتٌ حارٌّ
+عَصِير|ماءُ الفاكهةِ
+طَعَام|ما يُؤكَلُ
+شَرَاب|ما يُشرَبُ
+فَطُور|طعامُ الصباحِ
+نَهَار|ضدُّ الليلِ
+سَحَاب|الغيمُ
+شِمَال|ضدُّ الجنوبِ
+جَنُوب|ضدُّ الشمالِ
+يَمِين|ضدُّ اليسارِ
+يَسَار|ضدُّ اليمينِ
+أَمَام|ضدُّ خلفَ
+أَكْرَمَ|أحسنَ إلى الضيفِ
+أَرْسَلَ|بعثَ
+أَخْرَجَ|جعلَه يخرجُ
+أَدْخَلَ|جعلَه يدخلُ
+أَغْلَقَ|ضدُّ فتحَ
+أَسْلَمَ|دخلَ في الإسلامِ
+أَحْسَنَ|فعلَ الخيرَ وأتقنَ
+سَافَرَ|انتقلَ إلى بلدٍ آخرَ
+شَاهَدَ|رأى
+سَاعَدَ|أعانَ
+جَالَسَ|جلسَ معه
+تَرْجَمَ|نقلَ الكلامَ إلى لغةٍ أخرى
+دَحْرَجَ|جعلَ الشيءَ يتدوّرُ
+زَلْزَلَ|حرّكَ بشدّةٍ
+مِفْتَاح|أداةٌ نفتحُ بها البابَ
+مِصْبَاح|أداةٌ تعطي الضوءَ
+عُصْفُور|طائرٌ صغيرٌ
+بُسْتَان|حديقةٌ فيها أشجارٌ
+دِينَار|قطعةٌ من النقودِ
+مِيزَان|أداةٌ نَزِنُ بها
+زَيْتُون|شجرٌ يُعصَرُ ثمرُه زيتًا
+لَيْمُون|فاكهةٌ حامضةٌ صفراءُ
+سِرْوَال|لباسٌ للرِّجلينِ
+مَكْتُوب|ما كُتِبَ، والرسالةُ
+مَنْصُور|مَن نصرَه اللهُ
+مَحْبُوب|مَن يحبُّه الناسُ
+مَشْرُوب|ما يُشرَبُ
+مَعْرُوف|المشهورُ، والإحسانُ
+مَسْرُور|فَرِحٌ
+مَشْهُور|يعرفُه كثيرٌ من الناسِ
+مَكْسُور|ما وقعَ عليه الكسرُ
+مَفْتُوح|ضدُّ مغلقٍ
+مَحْمُود|ممدوحٌ
+مَدَارِس|جمعُ مدرسةٍ
+مَسَاجِد|جمعُ مسجدٍ
+مَكَاتِب|جمعُ مكتبٍ
+مَلَاعِب|جمعُ ملعبٍ
+مَطَاعِم|جمعُ مطعمٍ
+كَوَاكِب|جمعُ كوكبٍ
+اِنْطَلَقَ|ذهبَ مسرعًا
+اِجْتَمَعَ|التقى بغيرِه
+اِنْكَسَرَ|صارَ مكسورًا
+اِنْتَصَرَ|غلبَ وفازَ
+اِقْتَرَبَ|دنا
+اِبْتَسَمَ|ضحكَ ضحكًا خفيفًا بلا صوتٍ
+اِحْتَرَمَ|وقّرَ وأكرمَ
+اِنْتَظَرَ|بقيَ حتى يأتيَ الشيءُ
+تَسَابَقَ|تنافسَ في السرعةِ
+تَعَاوَنَ|ساعدَ بعضُهم بعضًا
+تَصَافَحَ|وضعَ كلٌّ يدَه في يدِ الآخرِ
+تَشَاوَرَ|طلبَ بعضُهم رأيَ بعضٍ
+تَبَاعَدَ|ابتعدَ بعضُهم عن بعضٍ
+إِنْسَان|الواحدُ من الناسِ
+سُلْطَان|الحاكمُ، أو القوّةُ
+شَيْطَان|عدوُّ الإنسانِ
+عُنْوَان|اسمُ الكتابِ، أو مكانُ السكنِ
+حَيَوَان|كائنٌ حيٌّ يتحرّكُ
+رَمَضَان|شهرُ الصيامِ
+صَابُون|ما نغسلُ به اليدينِ
+فِنْجَان|كوبٌ صغيرٌ للقهوةِ
+ثُعْبَان|الحيّةُ الكبيرةُ
+تِمْسَاح|حيوانٌ مفترسٌ يعيشُ في النهرِ
+حَلَزُون|حيوانٌ بطيءٌ يحملُ بيتَه
+دُلْفِين|حيوانٌ بحريٌّ ذكيٌّ
+طَاوُوس|طائرٌ جميلُ الريشِ
+قِنْدِيل|مصباحٌ معلّقٌ
+مِنْدِيل|قطعةُ قماشٍ نمسحُ بها
+مِسْمَار|قطعةُ حديدٍ مدبّبةٌ
+صُنْدُوق|وعاءٌ نحفظُ فيه الأشياءَ
+فُسْتَان|ثوبٌ للمرأةِ
+بِنْطَال|لباسٌ للرِّجلينِ
+مَاء|سائلٌ نشربُه
+سَأَلَ|طلبَ الجوابَ
+بِئْر|حفرةٌ عميقةٌ فيها ماءٌ
+ذِئْب|حيوانٌ مفترسٌ يشبهُ الكلبَ
+رَأْس|أعلى الجسمِ
+فَأْر|حيوانٌ صغيرٌ يأكلُ الحبوبَ
+بَدَأَ|شرعَ في العملِ
+قَرَأَ|نطقَ بالمكتوبِ
+أَكَلَ|تناولَ الطعامَ
+أَخَذَ|تناولَ الشيءَ بيدِه
+أَمَرَ|طلبَ أن يُفعَلَ الشيءُ
+بَكَى|دمعتْ عينُه حزنًا
+مَشَى|سارَ على رجليه
+رَمَى|ألقى الشيءَ
+هُدَى|الرشادُ والطريقُ الصحيحُ
+عَصَا|عودٌ نمسكُه باليدِ
+سَعَى|مشى وعملَ
+سَمَاء|ما فوقَنا، فيها الشمسُ والنجومُ
+شِتَاء|فصلُ البردِ والمطرِ
+عَشَاء|طعامُ الليلِ
+غَدَاء|طعامُ الظهرِ
+مَسَاء|آخرُ النهارِ وأوّلُ الليلِ
+حِذَاء|ما نلبسُه في الرِّجلِ
+لُؤْلُؤ|حجرٌ كريمٌ أبيضُ يخرجُ من البحرِ
+مُؤْمِن|مَن آمنَ باللهِ
+سَائِل|ما يجري مثلَ الماءِ
+شَجَرَة|نباتٌ له ساقٌ وأغصانٌ
+ثَمَرَة|ما يخرجُ من الشجرِ ويُؤكَلُ
+وَرَقَة|صفحةٌ نكتبُ عليها، أو جزءٌ من النباتِ
+بَقَرَة|أنثى البقرِ
+نَمْلَة|حشرةٌ صغيرةٌ
+نَحْلَة|حشرةٌ تصنعُ العسلَ
+سَمَكَة|حيوانٌ يعيشُ في الماءِ
+عُلْبَة|وعاءٌ صغيرٌ
+قَهْوَة|شرابٌ أسودُ يُنبِّهُ
+مُوسَى|نبيٌّ من أنبياءِ اللهِ
+عِيسَى|نبيٌّ من أنبياءِ اللهِ
+يَحْيَى|نبيٌّ من أنبياءِ اللهِ
+صَحْرَاء|أرضٌ واسعةٌ فيها رملٌ
+حَمْرَاء|ذاتُ اللونِ الأحمرِ
+خَضْرَاء|ذاتُ اللونِ الأخضرِ
+بَيْضَاء|ذاتُ اللونِ الأبيضِ
+صَفْرَاء|ذاتُ اللونِ الأصفرِ
+زَرْقَاء|ذاتُ لونِ السماءِ
+سَوْدَاء|ذاتُ اللونِ الأسودِ
+مَدْرَسَة|مكانُ التعلّمِ
+مَكْتَبَة|مكانُ الكتبِ
+حَدِيقَة|أرضٌ فيها زهرٌ وشجرٌ
+طَائِرَة|تطيرُ في السماءِ وتحملُ الناسَ
+فَرَاشَة|حشرةٌ ملوّنةُ الأجنحةِ
+مِلْعَقَة|أداةٌ نأكلُ بها
+نَافِذَة|فتحةٌ في الجدارِ للضوءِ والهواءِحَم|أبو الزوجِ أو الزوجةِ
+غَد|اليومُ الذي بعدَ اليومِ
+هُمْ|ضميرٌ للغائبينَ
+أَنْ|حرفٌ يأتي قبلَ الفعلِ
+إِنْ|حرفُ شرطٍ
+لَنْ|حرفُ نفيٍ للمستقبلِ
+لَوْ|حرفُ شرطٍ وتمنٍّ
+أَوْ|حرفٌ للتخييرِ
+أَمْ|حرفٌ للتخييرِ في السؤالِ
+هَلْ|حرفُ سؤالٍ
+قَدْ|حرفٌ للتحقيقِ
+كَيْ|حرفٌ بمعنى لأجلِ
+مَعَ|ظرفٌ بمعنى بصحبةِ
+مُذْ|بمعنى منذُ
+إِذْ|ظرفٌ بمعنى حينَ
+كَمْ|نسألُ بها عن العددِ
+لِمَ|بمعنى لماذا
+ذُو|بمعنى صاحبُ
+ذِي|اسمُ إشارةٍ للمؤنّثِ
+هَا|حرفُ تنبيهٍ
+أَيْ|حرفُ تفسيرٍ
+إِي|بمعنى نعمْ
+وَيْ|كلمةُ تعجّبٍ
+مَهْ|بمعنى اكفُفْ وتوقّفْ
+صَهْ|بمعنى اسكُتْ
+بَخْ|كلمةُ إعجابٍ ومدحٍ
+لَكَ|اللامُ مع ضميرِ المخاطَبِ
+لَهُ|اللامُ مع ضميرِ الغائبِ
+لِي|اللامُ مع ضميرِ المتكلّمِ
+بِهِ|الباءُ مع ضميرِ الغائبِ
+بِكَ|الباءُ مع ضميرِ المخاطَبِ
+بِي|الباءُ مع ضميرِ المتكلّمِ
+كُنْ|أمرٌ من كانَ
+عُدْ|أمرٌ بالرجوعِ
+ذُقْ|أمرٌ بالتذوّقِ
+فُزْ|أمرٌ بالفوزِ
+تُبْ|أمرٌ بالتوبةِ
+لُمْ|أمرٌ باللومِ
+صُنْ|أمرٌ بالحفظِ والصيانةِ
+قُدْ|أمرٌ بالقيادةِ
+خُضْ|أمرٌ بالدخولِ في الماءِ أو الأمرِ
+دُمْ|أمرٌ بالبقاءِ
+جُدْ|أمرٌ بالكرمِ
+رُحْ|أمرٌ بالذهابِ
+سُقْ|أمرٌ بالسَّوْقِ
+صُغْ|أمرٌ بالصياغةِ
+سُدْ|أمرٌ بالسيادةِ
+بِعْ|أمرٌ بالبيعِ
+طِرْ|أمرٌ بالطيرانِ
+عِشْ|أمرٌ بالحياةِ
+زِدْ|أمرٌ بالزيادةِ
+صِدْ|أمرٌ بالصيدِ
+مِلْ|أمرٌ بالميلِ
+غِبْ|أمرٌ بالغيابِ
+طِبْ|أمرٌ بأن تكونَ طيّبًا
+لِنْ|أمرٌ باللينِ
+بِتْ|أمرٌ بالمبيتِ
+صِحْ|أمرٌ برفعِ الصوتِ
+قِسْ|أمرٌ بالقياسِ
+كِلْ|أمرٌ بالكيلِ
+حِدْ|أمرٌ بالابتعادِ
+خَفْ|أمرٌ بالخوفِ
+نَلْ|أمرٌ بالنَّيْلِ
+هَبْ|أمرٌ بالعطاءِ
+قِفْ|أمرٌ بالوقوفِ
+عِدْ|أمرٌ بالوعدِ
+صِلْ|أمرٌ بالوصلِ
+زِنْ|أمرٌ بالوزنِ
+ضَعْ|أمرٌ بالوضعِ
+دَعْ|بمعنى اتركْ
+جِدْ|أمرٌ من وجدَ
+صِفْ|أمرٌ بالوصفِ
+عِظْ|أمرٌ بالموعظةِ
+ثِقْ|أمرٌ بالثقةِ
+مُرْ|أمرٌ من أمرَ
+سَلْ|أمرٌ بالسؤالِ
+مَجْلِس|مكانُ الجلوسِ
+مَرْكَب|ما نركبُه في البحرِ
+مَوْعِد|وقتُ اللقاءِ
+مَوْسِم|وقتٌ معيّنٌ من السنةِ
+مَغْرِب|وقتُ غروبِ الشمسِ
+مَشْرِق|مكانُ طلوعِ الشمسِ
+مَعْهَد|مكانُ الدراسةِ
+مَخْزَن|مكانُ حفظِ البضائعِ
+مَتْجَر|مكانُ البيعِ
+مَسْكَن|البيتُ
+مِنْبَر|مكانُ الخطيبِ في المسجدِ
+أَسْوَد|لونُ الليلِ
+أَبْيَض|لونُ الثلجِ
+أَحْمَر|لونُ الدمِ
+أَخْضَر|لونُ العشبِ
+أَصْفَر|لونُ الليمونِ
+أَزْرَق|لونُ السماءِ
+أَكْبَر|أكثرُ كِبَرًا
+أَصْغَر|أكثرُ صِغَرًا
+قُنْفُذ|حيوانٌ صغيرٌ له شوكٌ
+هُدْهُد|طائرٌ له تاجٌ على رأسِه
+بُلْبُل|طائرٌ صغيرٌ حسنُ الصوتِ
+جُنْدُب|حشرةٌ تقفزُ
+زَهْرَة|نَوْرُ النباتِ
+وَرْدَة|زهرةٌ جميلةُ الرائحةِ
+نَجْمَة|نجمٌ واحدٌ
+شَمْعَة|عودٌ يضيءُ إذا أشعلناه
+قِطْعَة|جزءٌ من الشيءِ
+كَلِمَة|لفظٌ له معنى
+جُمْلَة|كلماتٌ تُفيدُ معنًى
+لُعْبَة|ما نلعبُ به
+غُرْفَة|حجرةٌ في البيتِ
+خَيْمَة|بيتٌ من القماشِ
+سَاعَة|أداةٌ تعرّفُنا الوقتَ
+قَرْيَة|بلدةٌ صغيرةٌ
+مَلِكَة|زوجةُ الملكِ، أو حاكمةٌ
+أُسْرَة|الأبُ والأمُّ والأولادُ
+أَطْعَمَ|أعطى الطعامَ
+أَشْرَقَ|طلعَ وأضاءَ
+أَنْزَلَ|جعلَه ينزلُ
+أَسْرَعَ|عجّلَ
+أَعْطَى|منحَ
+أَلْقَى|رمى
+أَبْصَرَ|رأى
+أَصْلَحَ|ضدُّ أفسدَ
+أَخْبَرَ|أعلمَ بالخبرِ
+أَكْمَلَ|أتمَّ
+أَحْضَرَ|جاءَ بالشيءِ
+نَاقَشَ|حاورَ
+حَاوَلَ|جرّبَ أن يفعلَ
+شَارَكَ|كانَ شريكًا
+قَابَلَ|لقيَ
+سَامَحَ|عفا
+عَالَجَ|داوى
+بَعْثَرَ|فرّقَ الأشياءَ
+طَالِب|مَن يتعلّمُ
+عَالِم|كثيرُ العلمِ
+كَاتِب|مَن يكتبُ
+حَاكِم|مَن يحكمُ
+تَاجِر|مَن يبيعُ ويشتري
+سَاكِن|مَن يسكنُ المكانَ
+صَاحِب|الصديقُ
+رَاكِب|مَن يركبُ
+لَاعِب|مَن يلعبُ
+عَامِل|مَن يعملُ
+فَارِس|راكبُ الفرسِ
+حَارِس|مَن يحرسُ
+خَادِم|مَن يخدمُ
+بَائِع|مَن يبيعُ
+سَائِق|مَن يقودُ السيارةَ
+قَائِد|مَن يقودُ الجيشَ أو القومَ
+مَدِينَة|بلدٌ كبيرٌ
+مَزْرَعَة|أرضٌ مزروعةٌ
+مِحْرَاب|مكانُ الإمامِ في المسجدِ
+عُلَمَاء|جمعُ عالِمٍ
+فُقَرَاء|جمعُ فقيرٍ
+أُمَرَاء|جمعُ أميرٍ
+وُزَرَاء|جمعُ وزيرٍ
+شُعَرَاء|جمعُ شاعرٍ
+كُرَمَاء|جمعُ كريمٍ
+عُظَمَاء|جمعُ عظيمٍ
+حُكَمَاء|جمعُ حكيمٍ
+سُفَرَاء|جمعُ سفيرٍ
+مَسْمُوع|ما نسمعُه
+مَعْلُوم|معروفٌ
+مَجْهُول|غيرُ معروفٍ
+مَفْهُوم|واضحٌ
+مَشْغُول|ليسَ عندَه وقتٌ
+مَطْبُوخ|طعامٌ طُبِخَ
+مَغْسُول|نظيفٌ بالماءِ
+مَزْرُوع|ما زُرِعَ
+مَرْسُوم|ما رُسِمَ
+مَحْفُوظ|مصونٌ
+مَسْكُون|فيه سكّانٌ
+مَقْطُوع|ما قُطِعَ
+مَجْمُوع|ما جُمِعَ
+مَلْبُوس|ما يُلبَسُ
+مَحْمُول|ما يُحمَلُ
+مَطْلُوب|ما نريدُه
+مَسْرُوق|ما سُرِقَ
+مَصْنُوع|ما صُنِعَ
+مَوْجُود|حاضرٌ
+مَقْبُول|ضدُّ مرفوضٍ
+مَمْنُوع|غيرُ مسموحٍ
+مَسْمُوح|ليسَ ممنوعًا
+مَشْكُور|يستحقُّ الشكرَ
+مَظْلُوم|وقعَ عليه الظلمُ
+اِنْقَطَعَ|توقّفَ
+اِنْفَتَحَ|صارَ مفتوحًا
+اِبْتَعَدَ|صارَ بعيدًا
+اِشْتَرَى|ضدُّ باعَ
+اِخْتَارَ|انتقى
+اِحْتَاجَ|افتقرَ إلى الشيءِ
+اِرْتَفَعَ|علا
+اِجْتَهَدَ|بذلَ جهدَه
+اِشْتَغَلَ|عملَ
+اِعْتَذَرَ|طلبَ العفوَ
+اِنْتَبَهَ|أصغى وتيقّظَ
+اِكْتَشَفَ|وجدَ شيئًا جديدًا
+اِسْتَلَمَ|أخذَ الشيءَ
+تَسَاقَطَ|وقعَ شيئًا بعدَ شيءٍ
+تَعَارَفَ|عرفَ بعضُهم بعضًا
+تَبَادَلَ|أعطى كلٌّ الآخرَ
+تَنَاوَلَ|أخذَ وأكلَ
+تَكَاسَلَ|تثاقلَ عن العملِ
+تَشَاجَرَ|تخاصمَ
+تَرَاجَعَ|رجعَ إلى الخلفِ
+مِنْشَار|أداةٌ لقطعِ الخشبِ
+مِحْرَاث|أداةٌ لحرثِ الأرضِ
+مِقْيَاس|أداةٌ للقياسِ
+مِكْيَال|أداةٌ للكيلِ
+مِنْظَار|أداةٌ نرى بها البعيدَ
+مِكْنَسَة|أداةٌ للكنسِ
+مِسْطَرَة|أداةٌ لرسمِ الخطوطِ
+مِغْسَلَة|مكانُ غسلِ اليدينِ
+أَقْلَام|جمعُ قلمٍ
+أَبْوَاب|جمعُ بابٍ
+أَشْجَار|جمعُ شجرٍ
+أَنْهَار|جمعُ نهرٍ
+أَطْفَال|جمعُ طفلٍ
+أَوْلَاد|جمعُ ولدٍ
+أَصْحَاب|جمعُ صاحبٍ
+أَسْمَاك|جمعُ سمكٍ
+أَلْوَان|جمعُ لونٍ
+أَقْمَار|جمعُ قمرٍ
+جِئْ|أمرٌ بالمجيءِ
+بُحْ|أمرٌ بإظهارِ السرِّ
+قِطّ|حيوانٌ أليفٌ يموءُ
+بَطّ|طائرٌ يسبحُ في الماءِ
+دُبّ|حيوانٌ كبيرٌ كثيفُ الشعرِ
+رُزّ|حبوبٌ بيضاءُ تُطبَخُ
+بُنّ|حبوبٌ تُصنَعُ منها القهوةُ
+جَدّ|أبو الأبِ أو أبو الأمِّ
+أُمّ|الوالدةُ
+عَمّ|أخو الأبِ
+خَدّ|جانبُ الوجهِ
+فَخّ|أداةٌ لصيدِ الحيوانِ
+حَبّ|البذورُ
+مُخّ|عضوٌ في الرأسِ نفكّرُ به
+ظِلّ|ما يقعُ خلفَ الشيءِ إذا حجبَ الضوءَ
+سِنّ|واحدةُ الأسنانِ
+كَفّ|باطنُ اليدِ
+صَفّ|الفصلُ في المدرسةِ
+فَنّ|الرسمُ والزخرفةُ ونحوُهما
+خَطّ|الكتابةُ باليدِ
+حَجّ|زيارةُ مكّةَ للعبادةِ
+رَبّ|اللهُ سبحانه
+جَوّ|الهواءُ والطقسُ
+شَطّ|شاطئُ النهرِ أو البحرِ
+سَدّ|حاجزٌ يحبسُ الماءَ
+بَرّ|اليابسةُ، ضدُّ البحرِ
+ضَبّ|حيوانٌ صحراويٌّ يشبهُ السحليةَ
+زِرّ|ما نُغلقُ به الثوبَ
+عُشّ|بيتُ الطائرِ
+لُبّ|داخلُ الثمرةِ
+خَسّ|نباتٌ أخضرُ يُؤكَلُ
+حَيّ|جزءٌ من المدينةِ
+سُكَّر|مادّةٌ حلوةٌ بيضاءُ
+جَنَّة|الحديقةُ، ودارُ النعيمِ
+قِطَّة|أنثى القطِّ
+بَطَّة|أنثى البطِّ
+عَمَّة|أختُ الأبِ
+جَدَّة|أمُّ الأبِ أو أمُّ الأمِّ
+سُلَّم|درجٌ نصعدُ عليه
+مِقَصّ|أداةٌ لقصِّ الورقِ والقماشِ
+حَيَّة|الثعبانُ
+ذَرَّة|أصغرُ جزءٍ من الشيءِ
+دُرَّة|لؤلؤةٌ كبيرةٌ
+فِضَّة|معدنٌ ثمينٌ أبيضُ
+قُبَّة|سقفٌ مستديرٌ
+حَبَّة|واحدةُ الحبِّ
+هِرَّة|القطّةُ
+أُمَّة|جماعةٌ كبيرةٌ من الناسِ
+سَلَّة|وعاءٌ من الخوصِ
+جُبَّة|ثوبٌ واسعٌ طويلٌ
+حِمَّص|حبوبٌ تُطبَخُ وتُؤكَلُ
+تُفَّاح|فاكهةٌ حمراءُ أو خضراءُ
+رُمَّان|فاكهةٌ فيها حبٌّ أحمرُ كثيرٌ
+حَمَّام|مكانُ الاغتسالِ
+نَجَّار|صانعُ الأشياءِ من الخشبِ
+خَبَّاز|صانعُ الخبزِ
+حَدَّاد|صانعُ الأشياءِ من الحديدِ
+بَقَّال|بائعُ الطعامِ
+طَبَّاخ|مَن يطبخُ الطعامَ
+فَلَّاح|مَن يزرعُ الأرضَ
+بَوَّاب|حارسُ البابِ
+رَسَّام|مَن يرسمُ
+خَيَّاط|مَن يخيطُ الثيابَ
+حَلَّاق|مَن يقصُّ الشعرَ
+جَزَّار|بائعُ اللحمِ
+دُكَّان|متجرٌ صغيرٌ
+سِكِّين|أداةٌ للقطعِ
+شُبَّاك|نافذةٌ
+كُتَّاب|مكانٌ يتعلّمُ فيه الصغارُ القرآنَ
+عَطَّار|بائعُ العطرِ
+صَيَّاد|مَن يصيدُ
+بَحَّار|مَن يعملُ في السفينةِ
+طَيَّار|مَن يقودُ الطائرةَ
+مِظَلَّة|ما يحمينا من المطرِ والشمسِ
+مَجَلَّة|كتابٌ مصوّرٌ يصدرُ كلَّ مدّةٍ
+مِخَدَّة|ما نضعُ عليه الرأسَ عندَ النومِ
+مَحَطَّة|مكانُ وقوفِ القطارِ أو الحافلةِ
+بِطِّيخ|فاكهةٌ كبيرةٌ خضراءُ داخلُها أحمرُ
+قُبَّعَة|ما يُلبَسُ على الرأسِ
+مُعَلِّم|مَن يُعلِّمُ الطلّابَ
+مُدَرِّس|المعلّمُ
+مُكَيِّف|جهازٌ يبرّدُ الهواءَ
+مُصَوِّر|مَن يلتقطُ الصورَ
+مُوَظَّف|مَن يعملُ في مكتبٍ
+سَيَّارَة|مركبةٌ لها أربعُ عجلاتٍ
+نَظَّارَة|ما نلبسُه على العينينِ لنرى جيّدًا
+دَرَّاجَة|مركبةٌ لها عجلتانِ
+كُمَّثْرَى|فاكهةٌ تشبهُ التفّاحَ
+مُمَرِّضَة|مَن تعتني بالمرضى
+مُتَعَلِّم|مَن يتعلّمُ
+سَجَّادَة|بساطٌ نصلّي عليه
+كُرَّاسَة|دفترٌ صغيرٌ
+سَبُّورَة|لوحٌ يكتبُ عليه المعلّمُ
+كُوب|إناءٌ نشربُ فيه
+صَحْن|إناءٌ نأكلُ فيه
+قِدْر|إناءٌ نطبخُ فيه
+سَقْف|أعلى البيتِ من الداخلِ
+بَيْض|تضعُه الدجاجةُ
+جُبْن|طعامٌ يُصنَعُ من الحليبِ
+مِشْط|أداةٌ لتسريحِ الشعرِ
+ثُوم|نباتٌ قويُّ الرائحةِ يُطبَخُ
+حِبْر|سائلُ الكتابةِ
+وَرَق|ما نكتبُ عليه
+لَوْح|خشبةٌ عريضةٌ نكتبُ عليها
+فَأْس|أداةٌ لقطعِ الخشبِ
+حَبْل|خيوطٌ مفتولةٌ نربطُ بها
+نَعْل|ما نلبسُه في القدمِ
+قُفْل|أداةٌ نغلقُ بها البابَ
+جَيْب|ما نضعُ فيه الأشياءَ في الثوبِ
+كِيس|وعاءٌ من القماشِ أو الورقِ
+فُرْن|مكانُ الخبزِ والشيِّ
+جِسْر|طريقٌ فوقَ النهرِ
+بَلَد|الوطنُ والمدينةُ
+عُنُق|ما بينَ الرأسِ والجسمِ
+شَعْر|ما ينبتُ على الرأسِ
+كَتِف|أعلى الذراعِ
+وَجْه|مقدَّمُ الرأسِ
+صَدْر|أعلى الجسمِ من الأمامِ
+قَدَم|أسفلُ الرِّجلِ
+جِلْد|غطاءُ الجسمِ
+عَظْم|جزءٌ صلبٌ داخلَ الجسمِ
+نَسْر|طائرٌ كبيرٌ قويٌّ
+حُوت|أكبرُ حيوانٍ في البحرِ
+خَوْخ|فاكهةٌ ناعمةٌ حلوةٌ
+تِين|فاكهةٌ حلوةٌ ذاتُ بذورٍ صغيرةٍ
+ذُرَة|حبوبٌ صفراءُ
+قَمْح|حبوبٌ يُصنَعُ منها الدقيقُ
+فُول|حبوبٌ تُطبَخُ
+عَدَس|حبوبٌ صغيرةٌ تُطبَخُ
+فَصْل|الصفُّ في المدرسةِ
+طِين|ترابٌ مخلوطٌ بالماءِ
+صَخْر|حجارةٌ كبيرةٌ
+بَرْق|ضوءٌ يلمعُ في السماءِ
+رَعْد|صوتٌ يأتي بعدَ البرقِ
+غَيْم|السحابُ
+سَنَة|اثنا عشرَ شهرًا
+جِدَار|حائطُ البيتِ
+سَرِير|ما ننامُ عليه
+حَلِيب|اللبنُ
+سِرَاج|مصباحٌ قديمٌ
+دَفْتَر|أوراقٌ نكتبُ فيها
+بِسَاط|ما يُفرَشُ على الأرضِ
+قَارِب|سفينةٌ صغيرةٌ
+شَارِع|طريقٌ في المدينةِ
+إِصْبَع|واحدُ أصابعِ اليدِ
+لِسَان|عضوُ الذوقِ والكلامِ
+رُكْبَة|وسطُ الرِّجلِ
+ذِرَاع|اليدُ من المرفقِ إلى الأصابعِ
+غَزَال|حيوانٌ رشيقٌ سريعٌ
+بُومَة|طائرٌ يسهرُ في الليلِ
+دُودَة|حيوانٌ صغيرٌ طويلٌ بلا أرجلٍ
+مِشْمِش|فاكهةٌ صفراءُ صغيرةٌ
+خِيَار|خضارٌ أخضرُ طويلٌ
+شَعِير|حبوبٌ تأكلُها الدوابُّ
+جَوْرَب|ما نلبسُه في القدمِ تحتَ الحذاءِ
+مِعْطَف|ثوبٌ ثقيلٌ للبردِ
+شَاطِئ|حافّةُ البحرِ
+غَابَة|أرضٌ كثيرةُ الأشجارِ
+تُرَاب|ما على وجهِ الأرضِ
+ضَبَاب|سحابٌ قريبٌ من الأرضِ
+هِلَال|القمرُ في أوّلِ الشهرِ
+لَيْلَة|ليلٌ واحدٌ
+قِطَار|مركبةٌ طويلةٌ تسيرُ على سكّةٍ
+دَجَاجَة|طائرٌ يبيضُ
+سَفِينَة|مركبةٌ كبيرةٌ في البحرِ
+حَمَامَة|طائرٌ أبيضُ وديعٌ
+ذُبَابَة|حشرةٌ طائرةٌ مزعجةٌ
+بَعُوضَة|حشرةٌ صغيرةٌ تلدغُ
+زَرَافَة|حيوانٌ طويلُ العنقِ
+طَمَاطِم|خضارٌ أحمرُ
+بَطَاطِس|خضارٌ ينمو تحتَ الأرضِ
+مِبْرَاة|أداةٌ لبري القلمِ
+حَقِيبَة|ما نحملُ فيه الكتبَ
+عِمَامَة|ما يُلَفُّ على الرأسِ
+أُسْبُوع|سبعةُ أيّامٍ
+دَقِيقَة|ستّونَ ثانيةً
+مُهَنْدِس|مَن يصمّمُ البيوتَ والآلاتِ
+تَلّ|أرضٌ مرتفعةٌ قليلًا
+وَزّ|طائرٌ مثلُ البطِّ
+خَلّ|سائلٌ حامضٌ
+سِتّ|العددُ ستّةٌ
+شَمّ|حاسّةُ الأنفِ
+طِبّ|علمُ علاجِ المرضى
+إِنَّ|حرفُ توكيدٍ
+أَنَّ|حرفُ توكيدٍ
+ثُمَّ|حرفُ عطفٍ يدلُّ على الترتيبِ
+ثَمَّ|بمعنى هناك
+هُنَّ|ضميرُ الغائباتِ
+أَيّ|نسألُ بها عن التعيينِ
+كُلّ|جميعُ الشيءِ
+شَرّ|ضدُّ الخيرِ
+حَرّ|ضدُّ البردِ
+مُرّ|ضدُّ الحلوِ
+حُرّ|ليسَ عبدًا
+سِرّ|ما تُخفيه
+حَقّ|ضدُّ الباطلِ
+حَدّ|نهايةُ الشيءِ
+جِدّ|ضدُّ الهزلِ
+ضِدّ|عكسُ الشيءِ
+رَدّ|الجوابُ
+عَدّ|حسابُ العددِ
+ضُرّ|الأذى
+قَصّ|القطعُ بالمقصِّ
+نَصّ|كلامٌ مكتوبٌ
+لِصّ|السارقُ
+خُفّ|حذاءٌ خفيفٌ
+رَفّ|لوحٌ تُوضَعُ عليه الأشياءُ
+دُفّ|آلةٌ يُضرَبُ عليها
+شَكّ|ضدُّ اليقينِ
+مَسّ|اللمسُ
+حِسّ|الشعورُ
+هَمّ|الحزنُ والقلقُ
+غَمّ|الحزنُ
+كَمّ|المقدارُ
+سُمّ|مادّةٌ قاتلةٌ
+ذَمّ|ضدُّ المدحِ
+ضَمّ|الجمعُ والإلصاقُ
+يَمّ|البحرُ
+حُبّ|المودّةُ
+بُرّ|القمحُ
+دُرّ|اللؤلؤُ
+زَيّ|اللباسُ الموحَّدُ
+طَيّ|ثنيُ الشيءِ
+رَيّ|سقيُ الزرعِ
+كَيّ|تمليسُ الثيابِ بالمكواةِ
+شَيّ|إنضاجُ اللحمِ على النارِ
+وُدّ|المحبّةُ
+مَرَّ|عبرَ
+فَرَّ|هربَ
+حَلَّ|وجدَ الجوابَ
+ظَلَّ|بقيَ
+دَلَّ|أرشدَ
+ضَلَّ|تاهَ
+قَلَّ|صارَ قليلًا
+لَفَّ|طوى الشيءَ
+جَفَّ|يبسَ
+خَفَّ|صارَ خفيفًا
+رَنَّ|صوّتَ الجرسُ
+ظَنَّ|حسبَ
+تَمَّ|كملَ
+دَقَّ|طرقَ
+شَقَّ|فتحَ
+حَكَّ|فركَ الجلدَ
+عَضَّ|أمسكَ بأسنانِه
+مَصَّ|سحبَ بفمِه
+هَزَّ|حرّكَ
+فَكَّ|حلَّ الرباطَ
+صَبَّ|سكبَ
+شَدَّ|جذبَ بقوّةٍ
+مَدَّ|بسطَ وأطالَ
+صُوف|شعرُ الغنمِ
+قُطْن|نباتٌ تُصنَعُ منه الثيابُ
+جَيْش|جماعةُ الجنودِ
+جُنْد|الجنودُ
+سَهْم|عودٌ يُرمى بالقوسِ
+قَوْس|أداةٌ يُرمى بها السهمُ
+دِرْع|لباسٌ من حديدٍ للحربِ
+رُمْح|سلاحٌ طويلٌ
+كَنْز|مالٌ مدفونٌ
+قَبْر|مكانُ دفنِ الميتِ
+مَهْد|سريرُ الطفلِ
+عِقْد|قلادةٌ في العنقِ
+تَاج|ما يلبسُه الملكُ على رأسِه
+عَرْش|كرسيُّ الملكِ
+سُور|حائطٌ يحيطُ بالمدينةِ
+بُرْج|بناءٌ عالٍ
+كَهْف|بيتٌ في الجبلِ
+نَبْع|ماءٌ يخرجُ من الأرضِ
+مَوْج|ماءُ البحرِ المرتفعُ
+رِيش|غطاءُ جسمِ الطائرِ
+ذَيْل|طرفُ الحيوانِ من الخلفِ
+قَرْن|عظمٌ في رأسِ البقرةِ، أو مئةُ سنةٍ
+نَاب|سنٌّ حادّةٌ
+ظُفْر|غطاءُ طرفِ الإصبعِ
+عِجْل|ولدُ البقرةِ
+مُهْر|ولدُ الفرسِ
+جَدْي|ولدُ الماعزِ
+تَيْس|ذكرُ الماعزِ
+ثَوْر|ذكرُ البقرِ
+بَغْل|حيوانٌ بينَ الفرسِ والحمارِ
+فَهْد|حيوانٌ سريعٌ مفترسٌ
+وَعْل|تيسُ الجبلِ
+ضَبُع|حيوانٌ مفترسٌ يأكلُ الجيفَ
+صَقْر|طائرٌ جارحٌ
+بَاز|طائرٌ جارحٌ
+بُوم|طيورُ الليلِ
+عُود|خشبةٌ، وآلةٌ موسيقيّةٌ
+غُصْن|فرعُ الشجرةِ
+جِذْع|ساقُ الشجرةِ
+جَذْر|ما تحتَ الأرضِ من النباتِ
+ثَمَر|ما يخرجُ من الشجرِ
+نَخْل|شجرُ التمرِ
+كَرْم|شجرُ العنبِ
+قَصَب|نباتٌ طويلٌ مجوَّفٌ
+تِبْن|سيقانُ القمحِ اليابسةُ
+بَذْر|حبٌّ يُزرَعُ
+شَوْك|ما يجرحُ في النباتِ
+زَرْع|ما يُزرَعُ
+حَقْل|أرضٌ مزروعةٌ
+حَصَى|حجارةٌ صغيرةٌ
+مِسْك|عطرٌ طيّبٌ
+عِطْر|رائحةٌ طيّبةٌ
+زُبْد|ما يُستخرَجُ من الحليبِ
+سَمْن|زبدٌ مذابٌ
+شَاي|شرابٌ ساخنٌ
+تُوت|فاكهةٌ صغيرةٌ
+جَوْز|ثمرٌ قشرُه صلبٌ
+لَوْز|ثمرٌ أبيضُ لذيذٌ
+كَعْك|خبزٌ حلوٌ
+مَرَق|ماءُ الطبخِ
+صَوْم|الإمساكُ عن الطعامِ
+ذِكْر|ذكرُ اللهِ
+مَهْر|مالٌ يُعطى للزوجةِ
+عِيد|يومُ فرحٍ
+عُرْس|حفلُ الزواجِ
+ضَيْف|مَن يزورُك
+جَار|مَن يسكنُ قربَك
+شَعْب|سكّانُ البلدِ
+عَبْد|عبدُ اللهِ، والمملوكُ
+نَبِيّ|رسولُ اللهِ
+وَلِيّ|قريبٌ من اللهِ، أو الناصرُ
+غَنِيّ|كثيرُ المالِ
+قَوِيّ|ضدُّ ضعيفٍ
+ذَكِيّ|سريعُ الفهمِ
+شَقِيّ|ضدُّ سعيدٍ
+تَقِيّ|يخافُ اللهَ
+نَقِيّ|نظيفٌ صافٍ
+صَبِيّ|ولدٌ صغيرٌ
+حُلْو|طعمُه كالسكّرِ
+حَارّ|ساخنٌ
+صَعْب|ضدُّ سهلٍ
+لَيِّن|ناعمٌ
+صُلْب|قاسٍ شديدٌ
+مَيِّت|ليسَ حيًّا
+جَيِّد|حسنٌ
+طَيِّب|حلوٌ حسنٌ
+حَسَن|جميلٌ
+عَذْب|ماءٌ حلوٌ
+ضَيِّق|ضدُّ واسعٍ
+خَشِن|ضدُّ ناعمٍ
+ضَارّ|يؤذي
+شَفَة|طرفُ الفمِ
+لِثَة|لحمٌ حولَ الأسنانِ
+رُمْش|شعرُ طرفِ العينِ
+ذَقْن|أسفلُ الوجهِ
+سَاق|ما بينَ الركبةِ والقدمِ
+كَعْب|مؤخّرُ القدمِ
+كَبِد|عضوٌ في البطنِ
+رِئَة|عضوُ التنفّسِ
+عِرْق|وعاءُ الدمِ
+نَفَس|الهواءُ يدخلُ ويخرجُ
+رُوح|ما به الحياةُ
+عَقْل|به نفكّرُ
+جِسْم|بدنُ الإنسانِ
+بَدَن|الجسمُ
+صَوْت|ما نسمعُه
+سَمْع|حاسّةُ الأذنِ
+بَصَر|حاسّةُ العينِ
+ذَوْق|حاسّةُ اللسانِ
+لَمْس|حاسّةُ الجلدِ
+أُخْت|بنتُ أبيكَ وأمِّكَ
+زَوْج|الرجلُ للمرأةِ، أو اثنانِ
+اِبْن|الولدُ
+أَهْل|الأسرةُ
+رُكْن|زاويةٌ
+دَرَج|سلّمٌ
+سِتْر|غطاءٌ
+خَيْط|سلكٌ رفيعٌ للخياطةِ
+جَرَس|شيءٌ يرنُّ
+كَأْس|إناءٌ للشربِ
+دَلْو|وعاءٌ لإخراجِ الماءِ من البئرِ
+جَرَّة|إناءٌ من الفخّارِ
+فَحْم|يُحرَقُ للنارِ
+حَطَب|خشبٌ يُحرَقُ
+خَشَب|من جذوعِ الشجرِ
+ضَوْء|النورُ
+وَقْت|زمنٌ
+زَمَن|الوقتُ
+دَهْر|زمنٌ طويلٌ
+أَمْس|اليومُ الذي قبلَ اليومِ
+عُمْر|سنواتُ الحياةِ
+سَبْت|يومٌ بعدَ الجمعةِ
+أَحَد|يومٌ بعدَ السبتِ، أو واحدٌ
+خَمْس|العددُ خمسةٌ
+سَبْع|العددُ سبعةٌ
+تِسْع|العددُ تسعةٌ
+عَشْر|العددُ عشرةٌ
+مِئَة|عشرُ عشراتٍ
+أَلْف|عشرُ مئاتٍ
+مِصْر|بلدٌ عربيٌّ
+شَام|بلادُ الشامِ
+يَمَن|بلدٌ عربيٌّ
+رِيف|القرى والمزارعُ
+سِجْن|مكانُ حبسِ المجرمينَ
+اِسْم|ما نُنادى به
+لَوْن|مثلُ الأحمرِ والأخضرِ
+شَكْل|صورةُ الشيءِ
+حَجْم|كِبَرُ الشيءِ أو صِغَرُه
+وَزْن|ثقلُ الشيءِ
+طُول|ضدُّ العرضِ
+عَرْض|ضدُّ الطولِ
+ثَمَن|سعرُ الشيءِ
+مَال|النقودُ
+أَجْر|مقابلُ العملِ
+رِبْح|زيادةُ المالِ
+دَيْن|مالٌ تأخذُه وتردُّه
+رِزْق|ما يعطيه اللهُ
+خَبَر|ما يُنقَلُ من الكلامِ
+قَوْل|الكلامُ
+حَرْف|من حروفِ الهجاءِ
+شِعْر|كلامٌ موزونٌ
+نَثْر|كلامٌ غيرُ موزونٍ
+لَحْن|نغمةٌ
+رَقْم|العددُ المكتوبُ
+فِكْر|ما في العقلِ
+رَأْي|ما تراه صوابًا
+حُكْم|القرارُ
+أَمْر|طلبُ الفعلِ
+نَهْي|طلبُ تركِ الفعلِ
+عَهْد|وعدٌ
+نَصْر|الفوزُ
+فَوْز|النجاحُ
+خَوْف|الفزعُ
+أَمْن|الطمأنينةُ
+حُزْن|ضدُّ الفرحِ
+فَرَح|السرورُ
+صَبْر|التحمّلُ
+شُكْر|الحمدُ
+حِلْم|الصبرُ وعدمُ الغضبِ
+حُلْم|ما نراه في النومِ
+ذَنْب|خطأٌ
+عَفْو|المسامحةُ
+جُود|الكرمُ
+كَرَم|الجودُ
+بُخْل|ضدُّ الكرمِ
+جَهْل|ضدُّ العلمِ
+كَسَل|ضدُّ النشاطِ
+شُغْل|العملُ
+جُهْد|التعبُ في العملِ
+تَعَب|الإرهاقُ
+مَرَض|ضدُّ الصحّةِ
+أَلَم|الوجعُ
+جُرْح|شقٌّ في الجلدِ
+حُمَّى|ارتفاعُ حرارةِ الجسمِ
+قُرْص|شيءٌ مستديرٌ
+كُرَة|ما نلعبُ به
+لُغَة|الكلامُ كالعربيّةِ
+ثِقَة|الاطمئنانُ
+صِفَة|نعتٌ
+هِبَة|عطيّةٌ
+شَاة|واحدةُ الغنمِ
+قِرْش|سمكٌ مفترسٌ
+عَلَم|الرايةُ
+مِلْك|ما تملكُه
+سَعْد|الحظُّ الحسنُ
+كَوْن|العالمُ
+فَلَك|مدارُ النجومِ
+نَفْط|البترولُ
+غَاز|مادّةٌ مثلُ الهواءِ
+خُلُق|الطبعُ والأدبُ
+أَدَب|حسنُ الخلقِ
+لُطْف|الرِّفقُ
+جُوع|الحاجةُ إلى الطعامِ
+عَطَش|الحاجةُ إلى الماءِ
+شِبَع|ضدُّ الجوعِ
+نُطْق|الكلامُ
+قِصَّة|حكايةٌ
+قُوَّة|ضدُّ الضعفِ
+صِحَّة|سلامةُ الجسمِ
+عِزَّة|القوّةُ والكرامةُ
+كَرَز|فاكهةٌ حمراءُ صغيرةٌ
+بَلَح|التمرُ قبلَ أن ينضجَ
+فِجْل|خضارٌ أحمرُ
+لِفْت|خضارٌ أبيضُ
+قَرْع|خضارٌ كبيرٌ
+كُتُب|جمعُ كتابٍ
+رُسُل|جمعُ رسولٍ
+مُدُن|جمعُ مدينةٍ
+سُفُن|جمعُ سفينةٍ
+ضُحَى|وقتُ ارتفاعِ الشمسِ
+سَحَر|آخرُ الليلِ
+نَجَحَ|فازَ
+رَسَبَ|لم ينجحْ
+سَكَتَ|لم يتكلّمْ
+نَطَقَ|تكلّمَ
+صَرَخَ|صاحَ
+بَحَثَ|فتّشَ
+دَرَسَ|تعلّمَ
+حَرَسَ|حمى
+سَقَطَ|وقعَ
+ضَرَبَ|أصابَ بيدِه
+دَفَعَ|أبعدَ بقوّةٍ
+سَحَبَ|جرَّ
+رَفَعَ|جعلَه عاليًا
+خَفَضَ|جعلَه منخفضًا
+غَرَسَ|زرعَ الشجرَ
+سَقَى|أعطى الماءَ
+بَنَى|شيّدَ البيتَ
+جَرَى|ركضَ
+دَعَا|نادى، أو سألَ اللهَ
+رَأَى|أبصرَ
+نَسِيَ|ضدُّ تذكّرَ
+بَقِيَ|لم يذهبْ
+رَضِيَ|قبلَ وسُرَّ
+لَقِيَ|قابلَ
+خَشِيَ|خافَ
+عَطِشَ|احتاجَ إلى الماءِ
+تَعِبَ|أُرهِقَ
+غَضِبَ|ضدُّ رضيَ
+مَرِضَ|صارَ مريضًا
+كَذَبَ|قالَ غيرَ الحقِّ
+صَدَقَ|قالَ الحقَّ
+عَدَلَ|أنصفَ
+ظَلَمَ|جارَ
+نَصَحَ|أرشدَ
+مَنَعَ|حالَ دونَ الشيءِ
+سَمَحَ|أذِنَ
+شَعَرَ|أحسَّ
+قَدِمَ|جاءَ
+كَسَبَ|ربحَ
+خَسِرَ|ضدُّ ربحَ
+دَفَنَ|وضعَ تحتَ الترابِ
+نَبَتَ|خرجَ من الأرضِ
+ذَبَحَ|ذكّى الحيوانَ
+حَلَبَ|أخرجَ اللبنَ
+خَبَزَ|صنعَ الخبزَ
+عَجَنَ|خلطَ الدقيقَ بالماءِ
+غَزَلَ|فتلَ الصوفَ خيوطًا
+نَسَجَ|صنعَ القماشَ
+خَاطَ|ضمَّ القماشَ بالإبرةِ
+كَنَسَ|نظّفَ الأرضَ بالمكنسةِ
+فَرَشَ|بسطَ
+رَبَطَ|شدَّ بالحبلِ
+حَفَرَ|شقَّ الأرضَ
+قَفَزَ|وثبَ
+زَحَفَ|مشى على بطنِه
+نَبَحَ|صوّتَ الكلبُ
+صَهَلَ|صوّتَ الحصانُ
+عَلَّمَ|درّسَ
+كَلَّمَ|حدّثَ
+قَدَّمَ|أعطى
+رَتَّبَ|نظّمَ
+نَظَّفَ|أزالَ الوسخَ
+جَهَّزَ|أعدَّ
+صَلَّى|أدّى الصلاةَ
+زَيَّنَ|جمّلَ
+غَيَّرَ|بدّلَ
+سَبَّحَ|قالَ سبحانَ اللهِ
+كَبَّرَ|قالَ اللهُ أكبرُ
+سَمَّى|أعطى اسمًا
+رَبَّى|نشّأَ الولدَ
+غَنَّى|أنشدَ
+وَدَّعَ|قالَ مع السلامةِ
+فَكَّرَ|أعملَ عقلَه
+صَدَّقَ|آمنَ بالخبرِ
+حَطَّمَ|كسّرَ
+دَرَّسَ|علّمَ
+سَلَّمَ|ألقى السلامَ
+لَوَّنَ|صبغَ بالألوانِ
+أَحَبَّ|ودَّ
+أَعَدَّ|جهّزَ
+أَتَمَّ|أكملَ
+أَصَرَّ|ثبتَ على رأيِه
+شَاعِر|مَن يقولُ الشعرَ
+سَارِق|مَن يسرقُ
+نَاجِح|مَن نجحَ
+رَاسِب|مَن رسبَ
+غَائِب|غيرُ حاضرٍ
+حَاضِر|موجودٌ
+زَائِر|مَن يزورُ
+مَاهِر|حاذقٌ
+جَاهِل|ضدُّ عالمٍ
+عَاقِل|صاحبُ عقلٍ
+صَادِق|مَن يقولُ الحقَّ
+كَاذِب|مَن يكذبُ
+ظَالِم|مَن يظلمُ
+عَادِل|مَن ينصفُ
+نَائِم|مَن ينامُ
+جَالِس|قاعدٌ
+وَاقِف|قائمٌ
+ضَاحِك|مَن يضحكُ
+سَامِع|مَن يسمعُ
+نَاظِر|مَن ينظرُ
+رَاعِي|مَن يرعى الغنمَ
+بَارِد|ضدُّ حارٍّ
+حَامِض|طعمُه كالليمونِ
+مَالِح|فيه ملحٌ
+وَاسِع|ضدُّ ضيّقٍ
+وَاضِح|ظاهرٌ
+غَامِق|لونٌ داكنٌ
+فَاتِح|لونٌ خفيفٌ
+نَاعِم|ليّنٌ
+جَائِع|محتاجٌ إلى الطعامِ
+نَافِع|مفيدٌ
+سَالِم|سليمٌ
+رَخِيص|قليلُ الثمنِ
+ثَمِين|غالي الثمنِ
+سَمِين|كثيرُ اللحمِ
+نَحِيف|قليلُ اللحمِ
+مَرِيض|ليسَ صحيحًا
+صَحِيح|سليمٌ
+فَقِير|قليلُ المالِ
+أَمِير|حاكمٌ
+وَزِير|مساعدُ الحاكمِ
+سَفِير|ممثّلُ البلدِ
+رَئِيس|القائدُ
+طَبِيب|مَن يعالجُ المرضى
+شَهِيد|مَن ماتَ في سبيلِ اللهِ
+نَبِيل|كريمُ الأخلاقِ
+لَطِيف|رفيقٌ
+ظَرِيف|خفيفُ الروحِ
+شَرِيف|كريمُ النسبِ
+أَمِين|مَن يُؤتمَنُ
+بَخِيل|ضدُّ كريمٍ
+نَشِيط|ضدُّ كسولٍ
+كَسُول|ضدُّ نشيطٍ
+جَرِيء|شجاعٌ
+شُجَاع|لا يخافُ
+جَبَان|يخافُ كثيرًا
+عَرَبِيّ|من العربِ
+جَنَاح|يطيرُ به الطائرُ
+حَرِير|قماشٌ ناعمٌ ثمينٌ
+حَدِيد|معدنٌ قويٌّ
+نُحَاس|معدنٌ أحمرُ
+رَصَاص|معدنٌ ثقيلٌ
+زُجَاج|مادّةٌ شفّافةٌ
+جَلِيد|ماءٌ متجمّدٌ
+دُخَان|ما يخرجُ من النارِ
+رَمَاد|بقايا النارِ
+ظَلَام|ضدُّ النورِ
+صَبَاح|أوّلُ النهارِ
+بُخَار|ماءٌ صارَ مثلَ الهواءِ
+غُبَار|ترابٌ ناعمٌ يطيرُ
+جَرَاد|حشرةٌ تأكلُ الزرعَ
+ذُبَاب|حشراتٌ طائرةٌ
+فِرَاش|ما ننامُ عليه
+سِتَار|ما يُعلَّقُ على النافذةِ
+لِحَاف|غطاءُ النومِ
+إِبْرَة|أداةُ الخياطةِ
+قِرْبَة|وعاءٌ من الجلدِ للماءِ
+إِنَاء|وعاءٌ
+سِوَاك|عودٌ لتنظيفِ الأسنانِ
+حِزَام|ما يُشَدُّ على الوسطِ
+خِمَار|غطاءُ رأسِ المرأةِ
+رِدَاء|ثوبٌ فوقَ الثيابِ
+إِزَار|ثوبٌ يُلَفُّ على الوسطِ
+نَاقَة|أنثى الجملِ
+بَعِير|الجملُ
+عُقَاب|طائرٌ جارحٌ كبيرٌ
+حَمَام|طيورٌ وديعةٌ
+عَنْزَة|أنثى الماعزِ
+نَعَام|طائرٌ كبيرٌ لا يطيرُ
+جَوَاد|الحصانُ الأصيلُ
+خُفَّاش|حيوانٌ يطيرُ ليلًا
+طَحِين|الدقيقُ
+عَجِين|دقيقٌ مخلوطٌ بالماءِ
+خُضَار|النباتاتُ التي نطبخُها
+سَلَطَة|خضارٌ مخلوطٌ يُؤكَلُ
+حَسَاء|الشوربةُ
+شِوَاء|لحمٌ مشويٌّ
+حَلْوَى|طعامٌ حلوٌ
+كَعْكَة|قطعةُ كعكٍ
+زَعْتَر|نباتٌ عطريٌّ
+كُرُنْب|الملفوفُ
+مُرَبَّى|فاكهةٌ مطبوخةٌ بالسكّرِ
+زَنْبَق|زهرٌ أبيضُ
+زُمُرُّد|حجرٌ كريمٌ أخضرُ
+مَتْحَف|مكانُ الآثارِ
+مَعْبَد|مكانُ العبادةِ
+مَطَار|مكانُ الطائراتِ
+جَامِع|المسجدُ الكبيرُ
+مَقْهَى|مكانُ شربِ القهوةِ
+مَرْسَم|مكانُ الرسمِ
+مَسْبَح|مكانُ السباحةِ
+مَخْرَج|مكانُ الخروجِ
+مَدْخَل|مكانُ الدخولِ
+مَوْقِف|مكانُ الوقوفِ
+مَعْرِض|مكانُ عرضِ الأشياءِ
+مَصْعَد|آلةٌ ترفعُ الناسَ
+مَرْكَز|وسطُ الشيءِ
+مَنْبَع|مكانُ خروجِ الماءِ
+وَادِي|أرضٌ بينَ جبلينِ
+سَاحِل|شاطئُ البحرِ
+هَضْبَة|أرضٌ مرتفعةٌ مستويةٌ
+شَلَّال|ماءٌ ينزلُ من أعلى
+لَحْظَة|وقتٌ قصيرٌ جدًّا
+جُمُعَة|يومُ الجمعةِ
+خَمِيس|يومُ الخميسِ
+رَبِيع|فصلُ الأزهارِ
+خَرِيف|فصلُ تساقطِ الأوراقِ
+سُفْرَة|مائدةُ الطعامِ
+فِكْرَة|ما يخطرُ في العقلِ
+لُقْمَة|قطعةُ طعامٍ في الفمِ
+قَطْرَة|نقطةُ ماءٍ
+نُقْطَة|علامةٌ صغيرةٌ
+صُورَة|رسمٌ للشيءِ
+سُورَة|جزءٌ من القرآنِ
+دَوْلَة|بلدٌ له حكومةٌ
+ثَرْوَة|مالٌ كثيرٌ
+مَحَبَّة|الحبُّ
+رَحْمَة|العطفُ
+حِكْمَة|العلمُ النافعُ
+نِعْمَة|عطاءُ اللهِ
+قُدْرَة|الاستطاعةُ
+رَغْبَة|الإرادةُ
+رِحْلَة|سفرٌ
+جَوْلَة|نزهةٌ قصيرةٌ
+نُزْهَة|خروجٌ للتمتّعِ
+فُرْصَة|وقتٌ مناسبٌ
+خُطْبَة|كلامٌ يُلقى على الناسِ
+كَعْبَة|البيتُ الحرامُ في مكّةَ
+قِبْلَة|جهةُ الكعبةِ
+بَيْضَة|واحدةُ البيضِ
+تَمْرَة|واحدةُ التمرِ
+نَخْلَة|شجرةُ التمرِ
+ظَبْيَة|أنثى الغزالِ
+حَشَرَة|حيوانٌ صغيرٌ كالنملِ
+هَدِيَّة|عطيّةٌ
+صَلَاة|عبادةٌ فيها ركوعٌ وسجودٌ
+زَكَاة|مالٌ يُعطى للفقراءِ
+دُعَاء|سؤالُ اللهِ
+وُضُوء|غسلُ الأعضاءِ للصلاةِ
+لِحْيَة|شعرُ الذقنِ
+جَبِين|أعلى الوجهِ
+حَاجِب|شعرٌ فوقَ العينِ
+مَعِدَة|عضوٌ يهضمُ الطعامَ
+شِفَاء|الصحّةُ بعدَ المرضِ
+دَوَاء|ما نتداوى به
+رَاحَة|ضدُّ التعبِ
+بُكَاء|نزولُ الدموعِ
+كَلَام|القولُ
+جَوَاب|الردُّ على السؤالِ
+سُؤَال|طلبُ المعرفةِ
+هَوَاء|ما نتنفّسُه
+نَسِيم|ريحٌ لطيفةٌ
+رَايَة|العلمُ
+نَشِيد|كلامٌ يُغنّى
+جُنْدِيّ|واحدُ الجنودِ
+وَاحِد|العددُ واحدٌ
+ثَلَاث|العددُ ثلاثةٌ
+أَرْبَع|العددُ أربعةٌ
+ثَمَان|العددُ ثمانيةٌ
+عِرَاق|بلدٌ عربيٌّ
+حَفِيد|ابنُ الابنِ أو البنتِ
+أَشْعَلَ|أوقدَ النارَ
+أَطْفَأَ|أخمدَ النارَ
+أَمْسَكَ|قبضَ
+أَنْقَذَ|خلّصَ من الخطرِ
+أَهْمَلَ|تركَ ولم يهتمَّ
+أَعْلَنَ|أظهرَ
+أَبْعَدَ|جعلَه بعيدًا
+أَقْبَلَ|جاءَ
+أَكْثَرَ|زادَ
+أَصْبَحَ|دخلَ في الصباحِ
+أَمْطَرَ|نزلَ المطرُ
+أَجْلَسَ|جعلَه يجلسُ
+أَضْحَكَ|جعلَه يضحكُ
+أَحْزَنَ|جعلَه يحزنُ
+أَفْرَحَ|جعلَه يفرحُ
+أَشْبَعَ|أطعمَ حتى شبعَ
+نَادَى|دعا بصوتٍ عالٍ
+رَاقَبَ|نظرَ بانتباهٍ
+سَابَقَ|نافسَ في الجريِ
+صَافَحَ|وضعَ يدَه في يدِه
+عَاتَبَ|لامَ برفقٍ
+خَاصَمَ|نازعَ
+بَارَكَ|دعا بالبركةِ
+حَافَظَ|حفظَ واهتمَّ
+لَاحَظَ|انتبهَ
+كَافَأَ|أعطى جائزةً
+طَالَعَ|قرأَ
+دَافَعَ|حمى
+هَاجَرَ|انتقلَ من بلدِه
+جَاهَدَ|بذلَ جهدَه
+وَافَقَ|قبلَ
+زَخْرَفَ|زيّنَ
+طَمْأَنَ|هدّأَ وأراحَ
+بَرْهَنَ|أثبتَ بالدليلِ
+سَيْطَرَ|تحكّمَ
+هَرْوَلَ|مشى مسرعًا
+زَغْرَدَ|أطلقَ صوتَ الفرحِ
+دَغْدَغَ|حرّكَ أصابعَه ليُضحِكَ
+قَهْقَهَ|ضحكَ بصوتٍ عالٍ
+ثَرْثَرَ|أكثرَ الكلامَ
+رَفْرَفَ|حرّكَ جناحيه
+تَعَلَّمَ|طلبَ العلمَ
+تَكَلَّمَ|نطقَ
+تَقَدَّمَ|مشى إلى الأمامِ
+تَأَخَّرَ|جاءَ بعدَ الوقتِ
+تَذَكَّرَ|ضدُّ نسيَ
+تَوَضَّأَ|غسلَ أعضاءَه للصلاةِ
+تَعَشَّى|أكلَ العشاءَ
+تَنَفَّسَ|أدخلَ الهواءَ وأخرجَه
+تَكَبَّرَ|تعاظمَ
+تَحَرَّكَ|لم يسكنْ
+تَوَقَّفَ|سكنَ
+تَزَوَّجَ|اتّخذَ زوجةً
+تَجَوَّلَ|طافَ
+تَعَوَّدَ|اعتادَ
+تَفَرَّجَ|نظرَ متمتّعًا
+تَصَدَّقَ|أعطى الفقيرَ
+تَوَكَّلَ|اعتمدَ على اللهِ
+تَأَلَّمَ|أحسَّ بالألمِ
+تَبَسَّمَ|ابتسمَ
+اِتَّفَقَ|وافقَ غيرَه
+اِتَّصَلَ|تواصلَ
+اِتَّجَهَ|توجّهَ
+اِحْمَرَّ|صارَ أحمرَ
+اِخْضَرَّ|صارَ أخضرَ
+اِصْفَرَّ|صارَ أصفرَ
+اِسْوَدَّ|صارَ أسودَ
+اِبْيَضَّ|صارَ أبيضَ
+كَذَّاب|كثيرُ الكذبِ
+غَوَّاص|مَن يغوصُ في البحرِ
+سَبَّاح|مَن يسبحُ
+فَنَّان|صاحبُ فنٍّ
+نَقَّاش|مَن يزيّنُ الجدرانَ
+بَنَّاء|مَن يبني البيوتَ
+دَهَّان|مَن يطلي الجدرانَ
+حَمَّال|مَن يحملُ الأثقالَ
+كَنَّاس|مَن يكنسُ الطرقَ
+عَدَّاء|مَن يجري سريعًا
+سَمَّاك|بائعُ السمكِ
+فَحَّام|بائعُ الفحمِ
+جَمَّال|صاحبُ الجمالِ
+رَيَّان|ضدُّ عطشانَ
+بُيُوت|جمعُ بيتٍ
+دُرُوس|جمعُ درسٍ
+قُلُوب|جمعُ قلبٍ
+عُيُون|جمعُ عينٍ
+نُجُوم|جمعُ نجمٍ
+سُيُوف|جمعُ سيفٍ
+حُرُوف|جمعُ حرفٍ
+طُيُور|جمعُ طيرٍ
+جُذُور|جمعُ جذرٍ
+ضُيُوف|جمعُ ضيفٍ
+مُلُوك|جمعُ ملكٍ
+بُحُور|جمعُ بحرٍ
+جُسُور|جمعُ جسرٍ
+شُهُور|جمعُ شهرٍ
+فُصُول|جمعُ فصلٍ
+جِبَال|جمعُ جبلٍ
+رِجَال|جمعُ رجلٍ
+كِلَاب|جمعُ كلبٍ
+جِمَال|جمعُ جملٍ
+بِحَار|جمعُ بحرٍ
+ثِيَاب|جمعُ ثوبٍ
+رِيَاح|جمعُ ريحٍ
+كِبَار|جمعُ كبيرٍ
+صِغَار|جمعُ صغيرٍ
+كِرَام|جمعُ كريمٍ
+خِيَام|جمعُ خيمةٍ
+رِمَاح|جمعُ رمحٍ
+أَشْهُر|جمعُ شهرٍ
+أَيَّام|جمعُ يومٍ
+أَعْيُن|جمعُ عينٍ
+أَرْجُل|جمعُ رِجلٍ
+أَذْرُع|جمعُ ذراعٍ
+أَسْهُم|جمعُ سهمٍ
+تَعَلُّم|طلبُ العلمِ
+رِسَالَة|كلامٌ مكتوبٌ يُرسَلُ
+كِتَابَة|الخطُّ بالقلمِ
+زِرَاعَة|حرثُ الأرضِ وغرسُها
+تِجَارَة|البيعُ والشراءُ
+صِنَاعَة|عملُ الأشياءِ
+سِبَاحَة|العومُ في الماءِ
+قِرَاءَة|النطقُ بالمكتوبِ
+حِكَايَة|قصّةٌ
+هِدَايَة|الإرشادُ إلى الخيرِ
+نِهَايَة|آخرُ الشيءِ
+بِدَايَة|أوّلُ الشيءِ
+عِبَادَة|طاعةُ اللهِ
+سَعَادَة|الفرحُ الدائمُ
+نَظَافَة|ضدُّ الوسخِ
+شَجَاعَة|عدمُ الخوفِ
+صَدَاقَة|المحبّةُ بينَ الأصدقاءِ
+ثَقَافَة|المعرفةُ والعلمُ
+حَضَارَة|تقدّمُ الناسِ في العلمِ والبناءِ
+سَلَامَة|النجاةُ من الشرِّ
+كَرَامَة|العزّةُ والشرفُ
+عَدَالَة|الإنصافُ
+جَمَاعَة|عددٌ من الناسِ
+طَهَارَة|النظافةُ
+أَمَانَة|حفظُ ما يُؤتمَنُ عليه
+شَهَادَة|ورقةُ النجاحِ، أو قولُ الحقِّ
+إِجَازَة|عطلةٌ
+إِشَارَة|علامةٌ
+إِدَارَة|تنظيمُ العملِ
+إِذَاعَة|نشرُ الأخبارِ بالراديو
+إِجَابَة|الجوابُ
+إِقَامَة|السكنُ في مكانٍ
+كَاتِبَة|امرأةٌ تكتبُ
+طَالِبَة|بنتٌ تتعلّمُ
+عَالِمَة|امرأةٌ كثيرةُ العلمِ
+لَاعِبَة|بنتٌ تلعبُ
+فَاكِهَة|ثمرةٌ حلوةٌ تُؤكَلُ
+قَاعِدَة|أساسُ الشيءِ
+جَائِزَة|ما يُعطى للفائزِ
+حَافِلَة|سيّارةٌ كبيرةٌ تحملُ الناسَ
+قَافِلَة|جماعةُ المسافرينَ
+عَائِلَة|الأسرةُ
+مُسْلِمَة|امرأةٌ مسلمةٌ
+مُعَلِّمَة|امرأةٌ تُعلِّمُ
+مُدَرِّسَة|المعلّمةُ
+طَبِيبَة|امرأةٌ تعالجُ المرضى
+خَيَّاطَة|امرأةٌ تخيطُ
+صَدِيقَة|صاحبةٌ
+زَمِيلَة|رفيقةٌ في العملِ أو الدراسةِ
+أَمِيرَة|بنتُ الأميرِ
+مَخْلُوق|كائنٌ خلقَه اللهُ
+مَعْبُود|مَن يُعبَدُ
+مَوْلُود|طفلٌ وُلِدَ حديثًا
+مَسْؤُول|مَن عليه المسؤوليّةُ
+مَحْصُول|ما يُحصَدُ من الزرعِ
+مَشْرُوع|عملٌ مخطَّطٌ
+مَوْضُوع|الفكرةُ التي نتكلّمُ عنها
+مَجْنُون|فاقدُ العقلِ
+مَرْفُوع|مرتفعٌ
+مِسْكِين|فقيرٌ ضعيفٌ
+مَجْرُوح|فيه جرحٌ
+مَخْزُون|ما خُزِّنَ
+مَبْسُوط|مسرورٌ
+مَطْرُود|مُبعَدٌ
+مَهْجُور|متروكٌ
+مَغْرُور|متكبّرٌ
+مَحْرُوم|ممنوعٌ من الشيءِ
+مَقْصُود|مُرادٌ
+مَحْرُوق|أصابتْه النارُ
+مَبْلُول|فيه ماءٌ
+مَرْبُوط|مشدودٌ بحبلٍ
+مَدْفُون|تحتَ الترابِ
+مَخْبُوز|خُبِزَ في الفرنِ
+مَفْقُود|ضائعٌ
+مَأْكُول|ما يُؤكَلُ
+مَنْسُوج|مصنوعٌ بالنسجِ
+مَقْرُوء|ما يُقرَأُ
+مَنَازِل|جمعُ منزلٍ
+مَصَانِع|جمعُ مصنعٍ
+مَخَابِز|جمعُ مخبزٍ
+مَطَابِخ|جمعُ مطبخٍ
+مَجَالِس|جمعُ مجلسٍ
+مَرَاكِب|جمعُ مركبٍ
+مَوَاعِد|جمعُ موعدٍ
+مَوَاسِم|جمعُ موسمٍ
+مَعَاهِد|جمعُ معهدٍ
+مَتَاجِر|جمعُ متجرٍ
+مَسَاكِن|جمعُ مسكنٍ
+مَنَابِر|جمعُ منبرٍ
+مَعَارِض|جمعُ معرضٍ
+مَرَاكِز|جمعُ مركزٍ
+مَخَازِن|جمعُ مخزنٍ
+مَدَاخِل|جمعُ مدخلٍ
+مَخَارِج|جمعُ مخرجٍ
+أَصَابِع|جمعُ إصبعٍ
+أَرَانِب|جمعُ أرنبٍ
+ثَعَالِب|جمعُ ثعلبٍ
+عَقَارِب|جمعُ عقربٍ
+دَفَاتِر|جمعُ دفترٍ
+جَوَارِب|جمعُ جوربٍ
+فَنَادِق|جمعُ فندقٍ
+شَوَارِع|جمعُ شارعٍ
+قَوَارِب|جمعُ قاربٍ
+جَوَاهِر|جمعُ جوهرةٍ
+دَرَاهِم|جمعُ درهمٍ
+خَوَاتِم|جمعُ خاتمٍ
+حَدَائِق|جمعُ حديقةٍ
+رَسَائِل|جمعُ رسالةٍ
+قَبَائِل|جمعُ قبيلةٍ
+فَوَائِد|جمعُ فائدةٍ
+عَجَائِب|جمعُ عجيبةٍ
+ضَفَادِع|جمعُ ضفدعٍ
+بَلَابِل|جمعُ بلبلٍ
+قَنَافِذ|جمعُ قنفذٍ
+أَصْوَات|جمعُ صوتٍ
+أَقْوَال|جمعُ قولٍ
+أَعْمَال|جمعُ عملٍ
+أَحْلَام|جمعُ حلمٍ
+أَسْوَاق|جمعُ سوقٍ
+أَشْكَال|جمعُ شكلٍ
+أَحْجَار|جمعُ حجرٍ
+أَزْهَار|جمعُ زهرٍ
+أَمْطَار|جمعُ مطرٍ
+أَمْوَاج|جمعُ موجٍ
+أَجْسَام|جمعُ جسمٍ
+أَبْطَال|جمعُ بطلٍ
+أَجْيَال|جمعُ جيلٍ
+أَعْيَاد|جمعُ عيدٍ
+أَخْبَار|جمعُ خبرٍ
+أَسْرَار|جمعُ سرٍّ
+أَفْكَار|جمعُ فكرةٍ
+أَمْرَاض|جمعُ مرضٍ
+أَدْوِيَة|جمعُ دواءٍ
+أَطْبَاق|جمعُ طبقٍ
+أَكْوَاب|جمعُ كوبٍ
+أَثْوَاب|جمعُ ثوبٍ
+أَقْدَام|جمعُ قدمٍ
+أَجْنِحَة|جمعُ جناحٍ
+أَسْلِحَة|جمعُ سلاحٍ
+أَمْكِنَة|جمعُ مكانٍ
+أَحْيَاء|جمعُ حيٍّ
+أَشْيَاء|جمعُ شيءٍ
+أَسْمَاء|جمعُ اسمٍ
+أَعْدَاء|جمعُ عدوٍّ
+أَوْرَاق|جمعُ ورقةٍ
+أَغْصَان|جمعُ غصنٍ
+أَلْعَاب|جمعُ لعبةٍ
+أَصْنَاف|أنواعٌ
+أَنْوَاع|جمعُ نوعٍ
+أَحْوَال|جمعُ حالٍ
+أَطْعِمَة|جمعُ طعامٍ
+أَشْرِبَة|جمعُ شرابٍ
+اِشْتَاقَ|حنَّ إلى مَن يحبُّ
+اِحْتَفَلَ|أقامَ حفلًا
+اِنْصَرَفَ|ذهبَ
+اِنْقَلَبَ|صارَ أعلاه أسفلَه
+اِنْفَجَرَ|انشقَّ بقوّةٍ
+اِنْهَزَمَ|غُلِبَ
+اِنْتَقَلَ|تحوّلَ من مكانٍ إلى مكانٍ
+اِرْتَدَى|لبسَ
+اِحْتَرَقَ|أكلتْه النارُ
+اِلْتَقَى|قابلَ
+اِبْتَدَأَ|بدأَ
+اِنْتَهَى|وصلَ إلى النهايةِ
+اِخْتَلَفَ|لم يتّفقْ
+اِعْتَمَدَ|اتّكلَ
+اِفْتَرَقَ|تباعدَ
+اِشْتَعَلَ|اتّقدَ بالنارِ
+اِخْتَفَى|غابَ عن العينِ
+اِكْتَمَلَ|تمَّ
+اِمْتَلَأَ|صارَ مملوءًا
+اِبْتَلَعَ|بلعَ
+اِخْتَبَأَ|اختفى
+اِسْتَحَمَّ|اغتسلَ
+اِسْتَعَدَّ|تهيّأَ
+اِسْتَمَرَّ|داومَ
+اِسْتَقَرَّ|ثبتَ
+تَنَافَسَ|تسابقَ
+تَصَالَحَ|عادَ صديقًا بعدَ الخصامِ
+تَخَاصَمَ|تنازعَ
+تَحَاوَرَ|تبادلَ الكلامَ
+تَكَاتَبَ|كتبَ بعضُهم إلى بعضٍ
+تَجَاهَلَ|تظاهرَ بعدمِ المعرفةِ
+تَظَاهَرَ|أظهرَ غيرَ الحقيقةِ
+تَنَاقَشَ|تحاورَ
+تَقَابَلَ|التقى
+تَوَاضَعَ|لم يتكبّرْ
+تَعَالَى|ارتفعَ
+تَبَارَكَ|كثُرَ خيرُه
+ثَلَّاجَة|آلةٌ تبرّدُ الطعامَ
+غَسَّالَة|آلةٌ تغسلُ الثيابَ
+دَبَّابَة|سيّارةٌ حربيّةٌ مدرّعةٌ
+سَمَّاعَة|أداةٌ نسمعُ بها
+وَلَّاعَة|أداةٌ تُشعلُ النارَ
+خَلَّاطَة|آلةٌ تخلطُ الطعامَ
+شَمَّاعَة|ما نعلّقُ عليه الثيابَ
+حَصَّالَة|صندوقٌ صغيرٌ نجمعُ فيه النقودَ
+مِكْوَاة|أداةٌ لكيِّ الثيابِ
+مِرْوَحَة|آلةٌ تحرّكُ الهواءَ
+مِطْرَقَة|أداةٌ للدقِّ
+مِسْبَحَة|خرزٌ للتسبيحِ
+مِحْفَظَة|ما نضعُ فيه النقودَ
+مِقْلَمَة|علبةُ الأقلامِ
+مِنْشَفَة|قماشٌ نجفّفُ به
+مِدْخَنَة|ممرٌّ للدخانِ
+مِصْيَدَة|أداةٌ للصيدِ
+مِئْذَنَة|منارةُ المسجدِ
+مَطْبَعَة|مكانُ طباعةِ الكتبِ
+مَحْكَمَة|مكانُ القضاءِ
+مَقْبَرَة|مكانُ القبورِ
+مَمْلَكَة|بلدٌ يحكمُه ملكٌ
+مَعْرَكَة|قتالٌ
+مَسْأَلَة|سؤالٌ وقضيّةٌ
+مَوْهِبَة|قدرةٌ يعطيها اللهُ
+مَصْلَحَة|منفعةٌ
+مَنْزِلَة|مكانةٌ
+مَغْفِرَة|عفوُ اللهِ
+مَعْرِفَة|العلمُ بالشيءِ
+قَبِيلَة|جماعةٌ من الناسِ من أصلٍ واحدٍ
+وَسِيلَة|طريقةٌ
+فَضِيلَة|خُلُقٌ حسنٌ
+كَتِيبَة|جماعةٌ من الجيشِ
+ذَبِيحَة|حيوانٌ مذبوحٌ
+حَقِيقَة|الصدقُ والواقعُ
+طَبِيعَة|ما خلقَه اللهُ حولَنا
+جَرِيدَة|صحيفةٌ يوميّةٌ
+صَحِيفَة|جريدةٌ
+فَطِيرَة|خبزٌ رقيقٌ
+عَصِيدَة|طعامٌ من الدقيقِ والماءِ
+هَرِيسَة|طعامٌ من القمحِ واللحمِ
+ضَفِيرَة|شعرٌ مجدولٌ
+خَرِيطَة|رسمٌ للأرضِ والبلادِ
+حَظِيرَة|بيتُ الحيواناتِ
+وَظِيفَة|عملٌ
+غَنِيمَة|ما يُؤخَذُ في الحربِ
+فَرِيسَة|ما يصيدُه الحيوانُ المفترسُ
+بُحَيْرَة|بحرٌ صغيرٌ
+جَزِيرَة|أرضٌ حولَها ماءٌ
+مَيْدَان|ساحةٌ واسعةٌ
+مِينَاء|مكانُ السفنِ
+مَغَارَة|كهفٌ
+بَنَفْسَج|زهرٌ بنفسجيُّ اللونِ
+قَرَنْفُل|زهرٌ طيّبُ الرائحةِ
+يَاقُوت|حجرٌ كريمٌ أحمرُ
+مَرْجَان|حجرٌ أحمرُ من البحرِ
+سِنْجَاب|حيوانٌ صغيرٌ يتسلّقُ الأشجارَ
+كَتْكُوت|صغيرُ الدجاجِ
+صُرْصُور|حشرةٌ
+بُرْكَان|جبلٌ تخرجُ منه النارُ
+زِلْزَال|اهتزازُ الأرضِ
+إِعْصَار|ريحٌ شديدةٌ
+طُوفَان|ماءٌ كثيرٌ يغمرُ الأرضَ
+شِرْيَان|عِرقٌ يحملُ الدمَ
+إِحْسَان|فعلُ الخيرِ
+إِيمَان|التصديقُ باللهِ
+إِسْلَام|دينُ اللهِ
+إِكْرَام|الإحسانُ إلى الضيفِ
+إِنْقَاذ|التخليصُ من الخطرِ
+إِصْلَاح|ضدُّ الإفسادِ
+إِعْلَان|الإظهارُ
+إِخْلَاص|صفاءُ النيّةِ
+إِتْقَان|إحسانُ العملِ
+نُقْصَان|ضدُّ الزيادةِ
+غُفْرَان|العفوُ
+كِتْمَان|إخفاءُ السرِّ
+نِسْيَان|ضدُّ التذكّرِ
+عِصْيَان|عدمُ الطاعةِ
+بُنْيَان|بناءٌ
+جِيرَان|جمعُ جارٍ
+فِرْسَان|جمعُ فارسٍ
+شُجْعَان|جمعُ شجاعٍ
+صِبْيَان|جمعُ صبيٍّ
+إِخْوَان|جمعُ أخٍ
+عَطْشَان|محتاجٌ إلى الماءِ
+جَوْعَان|جائعٌ
+غَضْبَان|غاضبٌ
+فَرْحَان|فرِحٌ
+تَعْبَان|متعَبٌ
+كَسْلَان|كسولٌ
+نَعْسَان|يريدُ النومَ
+حَيْرَان|متحيّرٌ
+شَبْعَان|ضدُّ جوعانَ
+تَعْلِيم|التدريسُ
+تَرْتِيب|التنظيمُ
+تَنْظِيف|إزالةُ الوسخِ
+تَسْبِيح|قولُ سبحانَ اللهِ
+تَكْبِير|قولُ اللهُ أكبرُ
+تَفْكِير|إعمالُ العقلِ
+تَقْدِيم|العرضُ
+تَجْهِيز|الإعدادُ
+تَشْجِيع|التحفيزُ
+تَحْرِير|الإطلاقُ، والكتابةُ
+تَصْوِير|التقاطُ الصورِ
+تَلْوِين|الصبغُ بالألوانِ
+تَمْرِين|التدريبُ
+تَدْرِيب|التمرينُ
+تَقْوِيم|الرزنامةُ
+تَرْحِيب|قولُ أهلًا وسهلًا
+تَسْجِيل|الكتابةُ والحفظُ
+تَوْقِيع|كتابةُ الاسمِ على الورقةِ
+تِمْثَال|صورةٌ من حجرٍ
+تِلْمِيذ|طالبٌ صغيرٌ
+تَارِيخ|أخبارُ الماضي
+اِثْنَان|العددُ اثنانِ
+إِبْرِيق|إناءٌ له عروةٌ وفمٌ
+مِسْوَاك|عودٌ لتنظيفِ الأسنانِ
+نَعْنَاع|نباتٌ عطريٌّ
+بَامْيَة|خضارٌ أخضرُ
+ثَانِيَة|جزءٌ من الدقيقةِ
+طَاوِلَة|مائدةٌ نضعُ عليها الأشياءَ
+مِنْضَدَة|طاولةٌ
+جِلْبَاب|ثوبٌ طويلٌ واسعٌ
+قُفْطَان|ثوبٌ طويلٌ
+عُنْقُود|مجموعةُ حبّاتِ العنبِ
+عُرْجُون|عودُ عنقودِ التمرِ
+خُرْطُوم|أنفُ الفيلِ الطويلُ
+أُسْطُول|مجموعةُ سفنٍ
+مِنْقَار|فمُ الطائرِ
+أَظَافِر|جمعُ ظفرٍ
+أَسْنَان|جمعُ سنٍّ
+أَنْيَاب|جمعُ نابٍ
+أَكْتَاف|جمعُ كتفٍ
+حَوَاجِب|جمعُ حاجبٍ
+أَبْنَاء|جمعُ ابنٍ
+أُمَّهَات|جمعُ أمٍّ
+أَخَوَات|جمعُ أختٍ
+خَالَات|جمعُ خالةٍ
+بِرْمِيل|وعاءٌ كبيرٌ أسطوانيٌّ
+فَانُوس|مصباحٌ في علبةٍ
+إِسْطَبْل|بيتُ الخيلِ
+صَهْرِيج|خزّانُ ماءٍ
+مِزْمَار|آلةٌ يُنفَخُ فيها
+نَاقُوس|جرسٌ كبيرٌ
+يَمَامَة|طائرٌ يشبهُ الحمامةَ
+نَعَامَة|طائرٌ كبيرٌ لا يطيرُ
+غَزَالَة|أنثى الغزالِ
+جَرَادَة|واحدةُ الجرادِ
+زُنْبُور|حشرةٌ تلسعُ
+قَوْقَعَة|بيتُ الحلزونِ
+لُؤْلُؤَة|حبّةُ لؤلؤٍ
+جَوْهَرَة|حجرٌ ثمينٌ
+سِلْسِلَة|حلقاتٌ متّصلةٌ
+وِسَادَة|المخدّةُ
+سَتَائِر|جمعُ ستارٍ
+مَقَاعِد|جمعُ مقعدٍ
+نَوَافِذ|جمعُ نافذةٍ
+سَلَالِم|جمعُ سلّمٍ
+مِخْلَب|ظفرُ الطائرِ الجارحِ
+سَيِّدَة|امرأةٌ
+طَبْلَة|آلةٌ يُدَقُّ عليها
+بَجَعَة|طائرٌ مائيٌّ أبيضُ
+صَدَفَة|غطاءٌ صلبٌ لحيوانِ البحرِ
+مَقْعَد|كرسيٌّ
+عَمَّات|جمعُ عمّةٍ
+جَدَّات|جمعُ جدّةٍ
+بَنَات|جمعُ بنتٍ
+سَيِّد|رجلٌ كريمٌ، والرئيسُ
+قِطَط|جمعُ قطٍّ
+`;
+
+const LETTERS = "ا ب ت ث ج ح خ د ذ ر ز س ش ص ض ط ظ ع غ ف ق ك ل م ن ه و ي ء".split(" ");
+const NAMES = "ألف باء تاء ثاء جيم حاء خاء دال ذال راء زاي سين شين صاد ضاد طاء ظاء عين غين فاء قاف كاف لام ميم نون هاء واو ياء همزة".split(" ");
+const EXTRA = ["أ","إ","ؤ","ئ","ة","ى"];
+const EXTRA_NAMES = ["همزة فوق","همزة تحت","واو مهموزة","ياء مهموزة","تاء مربوطة","ألف مقصورة"];
+const ALL = [...LETTERS, ...EXTRA];
+const SHORT = {"أ":"فوق","إ":"تحت","ؤ":"على واو","ئ":"على ياء","ة":"مربوطة","ى":"مقصورة"};
+const nameOf = l => LETTERS.includes(l) ? NAMES[LETTERS.indexOf(l)] : EXTRA_NAMES[EXTRA.indexOf(l)];
+const MARKS = {a:"َ", i:"ِ", u:"ُ", o:"ْ"};
+const MARK_OF = {"َ":"a","ِ":"i","ُ":"u","ْ":"o"};
+const MARK_NAMES = {a:"فتحة", i:"كسرة", u:"ضمة", o:"سكون"};
+const NORM = {"أ":"ا","إ":"ا","آ":"ا"};
+const norm = l => NORM[l]||l;
+const LEVELS = [2,3,4,5];
+const LEVEL_NAMES = {2:"حرفان",3:"ثلاثة",4:"أربعة",5:"خمسة"};
+
+const SHADDA="\u0651";
+function parse(w){
+  const u=[];
+  for(const ch of w){
+    if(ch===SHADDA){ if(u.length) u[u.length-1].s = true; }
+    else if(MARK_OF[ch]){ if(u.length) u[u.length-1].m = MARK_OF[ch]; }
+    else if(ALL.includes(ch)||ch==="آ") u.push({l:ch, m:""});
+  }
+  return u;
+}
+const vowelAt = (u,i) => (u[i].s ? "~" : "") + (i===u.length-1 ? "" : (u[i].m==="o" ? "" : u[i].m));
+const keyOf = u => u.map((x,i)=> norm(x.l) + vowelAt(u,i)).join("|");
+const lettersOf = u => u.map(x=>norm(x.l)).join("");
+
+const WORDS=[], BY_KEY=new Map(), BY_LETTERS=new Map();
+DATA.trim().split("\n").forEach(line=>{
+  const [w,m] = line.split("|"); if(!w||!m) return;
+  const u = parse(w.trim()); const n = u.length; if(!LEVELS.includes(n)) return;
+  const e = {w:w.trim(), m:m.trim(), n, u, key:keyOf(u), letters:lettersOf(u)};
+  WORDS.push(e);
+  if(!BY_KEY.has(e.key)) BY_KEY.set(e.key, []); BY_KEY.get(e.key).push(e);
+  if(!BY_LETTERS.has(e.letters)) BY_LETTERS.set(e.letters, []); BY_LETTERS.get(e.letters).push(e);
+});
+
+/* ---------- sound ---------- */
+let soundOn = true;
+try{ soundOn = localStorage.getItem("lawh-sound")!=="off"; }catch(e){}
+let ctx=null, master=null;
+function ac(){
+  if(!soundOn) return null;
+  try{
+    if(!ctx){ ctx = new (window.AudioContext||window.webkitAudioContext)(); master = ctx.createGain(); master.gain.value = .5; master.connect(ctx.destination); }
+    if(ctx.state==="suspended") ctx.resume();
+    return ctx;
+  }catch(e){ return null; }
+}
+function pluck(f, t0=0, dur=.35, vol=.35, type="triangle"){
+  const c=ac(); if(!c) return; const t=c.currentTime+t0;
+  const o=c.createOscillator(), g=c.createGain(), o2=c.createOscillator(), g2=c.createGain();
+  o.type=type; o.frequency.value=f; o2.type="sine"; o2.frequency.value=f*2;
+  g.gain.setValueAtTime(0,t); g.gain.linearRampToValueAtTime(vol,t+.006); g.gain.exponentialRampToValueAtTime(.0008,t+dur);
+  g2.gain.setValueAtTime(vol*.25,t); g2.gain.exponentialRampToValueAtTime(.0008,t+dur*.5);
+  o.connect(g).connect(master); o2.connect(g2).connect(master);
+  o.start(t); o2.start(t); o.stop(t+dur+.02); o2.stop(t+dur+.02);
+}
+function tok(vol=.5){
+  const c=ac(); if(!c) return; const t=c.currentTime;
+  const len=Math.floor(c.sampleRate*.04), buf=c.createBuffer(1,len,c.sampleRate), d=buf.getChannelData(0);
+  for(let i=0;i<len;i++) d[i]=(Math.random()*2-1)*Math.pow(1-i/len,3);
+  const src=c.createBufferSource(); src.buffer=buf;
+  const bp=c.createBiquadFilter(); bp.type="bandpass"; bp.frequency.value=1700; bp.Q.value=2.5;
+  const g=c.createGain(); g.gain.value=vol; src.connect(bp).connect(g).connect(master); src.start(t);
+  const o=c.createOscillator(), og=c.createGain(); o.frequency.setValueAtTime(210,t); o.frequency.exponentialRampToValueAtTime(110,t+.06);
+  og.gain.setValueAtTime(vol*.6,t); og.gain.exponentialRampToValueAtTime(.001,t+.07); o.connect(og).connect(master); o.start(t); o.stop(t+.08);
+}
+const SND = {
+  tap: ()=>tok(.45),
+  haraka: m => { if(m==="o"){ tok(.3); return; } pluck({a:440,u:392,i:329.6}[m], 0, .32, .3); },
+  undo: ()=>{ const c=ac(); if(!c) return; const t=c.currentTime, o=c.createOscillator(), g=c.createGain();
+    o.frequency.setValueAtTime(620,t); o.frequency.exponentialRampToValueAtTime(300,t+.09); g.gain.setValueAtTime(.12,t); g.gain.exponentialRampToValueAtTime(.001,t+.1);
+    o.connect(g).connect(master); o.start(t); o.stop(t+.12); },
+  // Hijaz-flavoured rise: D Eb F# G A D'
+  win: ()=>{ [293.66,311.13,369.99,392,440].forEach((f,i)=>pluck(f,i*.085,.4,.28)); pluck(587.33,.47,.9,.32); pluck(440,.47,.9,.16); },
+  near: ()=>{ pluck(392,0,.3,.26); pluck(440,.13,.45,.24); },
+  miss: ()=>{ pluck(146.8,0,.22,.4,"sine"); pluck(110,.12,.3,.4,"sine"); },
+};
+
+/* ---------- speech ---------- */
+let arVoice = null;
+function findVoice(){
+  try{ arVoice = speechSynthesis.getVoices().find(v=>/^ar/i.test(v.lang)) || null; }catch(e){ arVoice=null; }
+}
+if("speechSynthesis" in window){ findVoice(); try{ speechSynthesis.onvoiceschanged = findVoice; }catch(e){} }
+function speak(t){ try{ speechSynthesis.cancel(); const u=new SpeechSynthesisUtterance(t); u.lang=arVoice.lang; u.voice=arVoice; u.rate=.8; speechSynthesis.speak(u); }catch(e){} }
+
+/* ---------- state ---------- */
+let found = new Set();
+try{ found = new Set(JSON.parse(localStorage.getItem("lawh-found")||"[]")); }catch(e){}
+const save = ()=>{ try{ localStorage.setItem("lawh-found", JSON.stringify([...found])); }catch(e){} };
+let stars={}, streak={n:0,day:""};
+try{ stars = JSON.parse(localStorage.getItem("lawh-stars")||"{}"); }catch(e){}
+try{ streak = JSON.parse(localStorage.getItem("lawh-streak")||'{"n":0,"day":""}'); }catch(e){}
+const saveG = ()=>{ try{ localStorage.setItem("lawh-stars",JSON.stringify(stars)); localStorage.setItem("lawh-streak",JSON.stringify(streak)); }catch(e){} };
+const UNLOCK = 15;
+const dayStr = d => d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const today = () => dayStr(new Date());
+const yesterday = () => { const d=new Date(); d.setDate(d.getDate()-1); return dayStr(d); };
+const liveStreak = () => (streak.day===today()||streak.day===yesterday()) ? streak.n : 0;
+const foundIn = n => levelKeys(n).filter(k=>found.has(k)).length;
+const isOpen = n => n===LEVELS[0] || foundIn(n-1) >= UNLOCK;
+let level=2, built=[], picking=null, clue=null, busy=false, cardWord="", nearTried=new Set(), hintUsed=false;
+const $ = id => document.getElementById(id);
+
+function glyph(x, i){
+  if(x.l==="ا"){
+    if(i===0 && x.m==="a") return "أ"+MARKS.a;
+    if(i===0 && x.m==="u") return "أ"+MARKS.u;
+    if(i===0 && x.m==="i") return "إ"+MARKS.i;
+    if(x.m==="o"||!x.m) return "ا";
+  }
+  return x.l + (x.s ? SHADDA : "") + (x.m ? MARKS[x.m] : "");
+}
+const render = u => u.map(glyph).join("");
+const levelKeys = n => [...new Set(WORDS.filter(w=>w.n===n).map(w=>w.key))];
+
+const STAR='<svg viewBox="0 0 24 24" class="CLS"><path stroke-width="1.5" stroke-linejoin="round" d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg>';
+const LOCK='<svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>';
+const AR_NUM = n => String(n).replace(/\d/g,d=>"٠١٢٣٤٥٦٧٨٩"[d]);
+function drawLevels(){
+  $("levels").innerHTML = LEVELS.map(n=>{ const open=isOpen(n);
+    return `<button class="lvl key${open?"":" locked"}${n===freshLevel?" fresh":""}" data-n="${n}" aria-pressed="${n===level}" aria-label="${LEVEL_NAMES[n]} أحرف${open?"":"، مقفل"}">${open?AR_NUM(n):LOCK}</button>`; }).join("");
+  const s=liveStreak(); $("streakN").textContent=AR_NUM(s); $("streak").classList.toggle("lit", streak.day===today());
+  $("badge").textContent = AR_NUM(found.size);
+  $("badge").hidden = !found.size;
+}
+function drawLawh(states){
+  const w=$("word");
+  if(!built.length && !picking){ w.className="word empty"; const nx=level+1, got=foundIn(level);
+    w.textContent = (LEVELS.includes(nx) && !isOpen(nx)) ? `${LEVEL_NAMES[level]} أحرف · ${AR_NUM(got)} من ${AR_NUM(UNLOCK)} لفتح المستوى ${AR_NUM(nx)}` : `اختر حرفًا، ثم حركته · ${LEVEL_NAMES[level]} أحرف`; }
+  else { w.className="word"; w.textContent = render(built) + (picking ? picking+(shaddaOn?SHADDA:"") : ""); }
+  let h="";
+  for(let i=0;i<level;i++){
+    if(i<built.length){ const st=states?states[i]:""; h+=`<span class="cell ${st}">${glyph(built[i],i)}</span>`; }
+    else if(i===built.length && picking) h+=`<span class="cell pend">${picking+(shaddaOn?SHADDA:"")}</span>`;
+    else h+=`<span class="cell empty"></span>`;
+  }
+  $("cells").innerHTML=h;
+  $("undo").disabled = !built.length && !picking;
+}
+function tileHTML(l){ const x=EXTRA.includes(l); return `<button class="tile key${x?" x":""}" data-l="${l}" aria-pressed="${picking===l}" aria-label="${nameOf(l)}"><span class="g">${l}</span><span class="n">${SHORT[l]||nameOf(l)}</span></button>`; }
+function drawBoard(){ $("board").innerHTML = ALL.map(tileHTML).join(""); }
+const NO_SHADDA = ["ا","ى","ة","ء","أ","إ"];
+function drawPicker(){
+  const h=$("harakat"); h.classList.toggle("idle", !picking);
+  const canS = picking && !NO_SHADDA.includes(picking);
+  if(!canS) shaddaOn=false;
+  const sh = `<button class="hk key sh" id="shBtn" aria-pressed="${shaddaOn}" ${canS?"":"disabled"}><span class="g">${canS ? picking+SHADDA : "ـ"+SHADDA}</span><span class="n">شدّة</span></button>`;
+  h.innerHTML = sh + ["a","i","u","o"].map(m=>{
+    const off = !picking || (shaddaOn && m==="o");
+    const g = picking ? glyph({l:picking,m,s:shaddaOn}, built.length) : "ـ"+MARKS[m];
+    return `<button class="hk key" data-m="${m}" ${off?"disabled":""}><span class="g">${g}</span><span class="n">${shaddaOn && m!=="o" ? "شدّة و"+MARK_NAMES[m] : MARK_NAMES[m]}</span></button>`; }).join("");
+}
+function drawFound(){
+  $("sum").textContent = `وجدتَ ${AR_NUM(found.size)} من ${AR_NUM(BY_KEY.size)} كلمة`;
+  $("wordsList").innerHTML = LEVELS.map(n=>{
+    const all=levelKeys(n), ks=all.filter(k=>found.has(k));
+    return `<div class="lv-h">${LEVEL_NAMES[n]} أحرف <span>${AR_NUM(ks.length)} / ${AR_NUM(all.length)}</span></div>` +
+      (ks.length ? `<div class="chips">${ks.map(k=>`<button class="chip key" data-k="${k}">${BY_KEY.get(k)[0].w}<small>${"★".repeat(stars[k]||3)}</small></button>`).join("")}</div>` : `<p class="none">لا كلمات بعدُ.</p>`);
+  }).join("");
+}
+function newClue(){
+  const pool=levelKeys(level).filter(k=>!found.has(k));
+  if(!pool.length){ clue=null; $("clueText").textContent="أحسنتَ! وجدتَ كلَّ كلماتِ هذا المستوى."; $("hint").hidden=true; return; }
+  clue = pool[Math.floor(Math.random()*pool.length)]; hintUsed=false;
+  $("hint").hidden=false; $("hint").textContent="تلميح";
+  $("clueText").textContent = BY_KEY.get(clue).map(e=>e.m).join(" / ");
+}
+function msg(t){ $("msg").textContent=t; }
+function drawAll(){ drawLevels(); drawLawh(); drawBoard(); drawPicker(); drawFound(); }
+
+function flipCells(states, done){
+  drawLawh();
+  const cells=[...$("cells").children];
+  states.forEach((st,i)=>{
+    setTimeout(()=>{
+      const c=cells[i]; c.classList.add("flip");
+      setTimeout(()=>{ c.classList.add(st); },210);
+    }, i*110);
+  });
+  setTimeout(done, states.length*110+380);
+}
+function check(){
+  busy=true;
+  const k=keyOf(built), hits=BY_KEY.get(k);
+  if(hits){
+    flipCells(built.map(()=>"ok"), ()=>{
+      const isNew=!found.has(k), solved=clue===k;
+      const earned = (solved && hintUsed) ? 1 : (nearTried.has(lettersOf(built)) ? 2 : 3);
+      const nextLv = level+1, wasOpen = LEVELS.includes(nextLv) && isOpen(nextLv);
+      found.add(k); save();
+      const improved = earned > (stars[k]||0);
+      if(isNew || improved) stars[k] = Math.max(stars[k]||0, earned);
+      let extras=[];
+      if(streak.day!==today()){
+        streak.n = streak.day===yesterday() ? streak.n+1 : 1; streak.day=today();
+        extras.push(streak.n>1 ? `سلسلة ${AR_NUM(streak.n)} أيام متتالية!` : "بدأتَ سلسلةَ اليوم!");
+        bumpStreak=true;
+      }
+      if(LEVELS.includes(nextLv) && !wasOpen && isOpen(nextLv)){ extras.push(`فُتِحَ المستوى ${AR_NUM(nextLv)}!`); freshLevel=nextLv; }
+      if(!isNew && improved) extras.push("نجومٌ أكثر من قبل!");
+      saveG(); SND.win(); if(isNew||extras.length) confetti();
+      showCard(hits, solved ? "حللتَ اللغز!" : (isNew ? "كلمة جديدة" : "وجدتَها من قبل"), isNew||solved, earned, extras.join(" · "));
+      if(bumpStreak){ const st=$("streak"); st.classList.remove("bump"); void st.offsetWidth; st.classList.add("bump"); bumpStreak=false; }
+      if(solved) newClue();
+      msg(""); drawLevels(); drawFound(); busy=false;
+    });
+    return;
+  }
+  const same = BY_LETTERS.get(lettersOf(built));
+  if(same){
+    let best=null, bestScore=-1;
+    same.forEach(e=>{ const s=built.filter((x,i)=>vowelAt(built,i)===vowelAt(e.u,i)).length; if(s>bestScore){bestScore=s;best=e;} });
+    const states = built.map((x,i)=> vowelAt(built,i)===vowelAt(best.u,i) ? "ok" : "near");
+    nearTried.add(lettersOf(built));
+    flipCells(states, ()=>{ SND.near(); msg("الحروف صحيحة! غيّر حركةَ الأصفر"); busy=false; drawLawhKeep(states); });
+  } else {
+    const states = built.map(()=>"miss");
+    flipCells(states, ()=>{ SND.miss(); const l=$("lawh"); l.classList.remove("shake"); void l.offsetWidth; l.classList.add("shake");
+      msg("لا توجد كلمة. احذف حرفًا وجرّب"); busy=false; drawLawhKeep(states); });
+  }
+}
+let shaddaOn=false;
+let kept=null, bumpStreak=false, freshLevel=0;
+function drawLawhKeep(states){ kept=states; drawLawh(states); }
+function showCard(hits, tag, fresh, earned, extra){
+  $("tag").textContent=tag; $("tag").className="tag"+(fresh?"":" old");
+  const sc = earned || stars[hits[0].key] || 3;
+  $("stars").innerHTML=[1,2,3].map(i=>STAR.replace("CLS", i<=sc?"on":"off")).join("");
+  [...$("stars").children].forEach((s,i)=>{ s.style.animationDelay=(i*.15)+"s"; if(earned && i<sc) setTimeout(()=>pluck([523.25,659.25,783.99][i],0,.3,.22),300+i*150); });
+  $("extraLine").hidden=!extra; $("extraLine").textContent=extra||"";
+  cardWord = hits[0].w;
+  $("cardWord").textContent = hits[0].w;
+  $("cardMeanings").innerHTML = hits.map(h=>`<p class="m">${h.m}</p>`).join("");
+  $("speakBtn").hidden = !arVoice;
+  $("sheet").hidden=false; $("nextBtn").focus();
+}
+function closeCard(){ $("sheet").hidden=true; if(built.length===level){ built=[]; kept=null; nearTried.clear(); } drawLawh(); drawLevels(); }
+
+/* confetti in lawh colours */
+function confetti(){
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const cv=$("confetti"), c=cv.getContext("2d"); const W=cv.width=innerWidth, H=cv.height=innerHeight;
+  const cs=getComputedStyle(document.documentElement);
+  const cols=["--ok","--near","--indigo","--wood"].map(v=>cs.getPropertyValue(v).trim());
+  const P=Array.from({length:70},()=>({x:W/2+(Math.random()-.5)*80,y:H*.35,vx:(Math.random()-.5)*9,vy:-Math.random()*9-3,r:Math.random()*6+4,a:Math.random()*6,c:cols[Math.floor(Math.random()*cols.length)]}));
+  let f=0; (function step(){ c.clearRect(0,0,W,H);
+    P.forEach(p=>{ p.vy+=.28; p.x+=p.vx; p.y+=p.vy; p.a+=.15; c.save(); c.translate(p.x,p.y); c.rotate(p.a); c.fillStyle=p.c; c.fillRect(-p.r/2,-p.r/4,p.r,p.r/2); c.restore(); });
+    if(++f<110) requestAnimationFrame(step); else c.clearRect(0,0,W,H); })();
+}
+
+/* ---------- events ---------- */
+function onTile(e){
+  const t=e.target.closest(".tile"); if(!t||busy) return;
+  if(built.length>=level){ msg("اللوح ممتلئ. احذف حرفًا"); SND.miss(); return; }
+  picking = picking===t.dataset.l ? null : t.dataset.l; shaddaOn=false; SND.tap(); msg(""); kept=null;
+  drawLawh(); drawBoard(); drawPicker();
+}
+$("board").addEventListener("click", onTile);
+$("harakat").addEventListener("click", e=>{
+  const b=e.target.closest(".hk"); if(!b||!picking||busy||b.disabled) return;
+  if(b.id==="shBtn"){ shaddaOn=!shaddaOn; SND.tap(); drawLawh(); drawPicker(); return; }
+  built.push({l:picking, m:b.dataset.m, s:shaddaOn}); picking=null; shaddaOn=false; SND.haraka(b.dataset.m);
+  drawLawh(); drawBoard(); drawPicker();
+  const last=$("cells").children[built.length-1]; if(last) last.classList.add("pop");
+  if(built.length===level) setTimeout(check,180);
+});
+$("undo").onclick=()=>{ if(busy) return; if(picking) picking=null; else built.pop(); shaddaOn=false; kept=null; SND.undo(); msg(""); drawLawh(); drawBoard(); drawPicker(); };
+$("skip").onclick=()=>{ SND.tap(); newClue(); };
+$("hint").onclick=()=>{ if(!clue) return; SND.tap(); hintUsed=true; const u=BY_KEY.get(clue)[0].u; $("hint").textContent=`يبدأ بـ ${glyph(u[0],0)}`; };
+$("levels").addEventListener("click", e=>{
+  const b=e.target.closest(".lvl"); if(!b||busy) return;
+  const n=+b.dataset.n;
+  if(!isOpen(n)){ SND.miss(); msg(`اجمع ${AR_NUM(UNLOCK)} كلمة من المستوى ${AR_NUM(n-1)} لفتحه (${AR_NUM(foundIn(n-1))}/${AR_NUM(UNLOCK)})`); return; }
+  SND.tap(); if(freshLevel===n) freshLevel=0;
+  level=n; nearTried.clear(); built=[]; picking=null; kept=null; msg(""); newClue(); drawAll();
+});
+$("wordsList").addEventListener("click", e=>{ const c=e.target.closest(".chip"); if(!c) return; SND.tap(); $("wordsSheet").hidden=true; showCard(BY_KEY.get(c.dataset.k),"من كلماتك",false); });
+$("wordsBtn").onclick=()=>{ SND.tap(); drawFound(); $("wordsSheet").hidden=false; $("closeWords").focus(); };
+$("closeWords").onclick=()=>{ SND.tap(); $("wordsSheet").hidden=true; };
+["sheet","wordsSheet"].forEach(id=>$(id).addEventListener("click",e=>{ if(e.target.id===id){ if(id==="sheet") closeCard(); else $(id).hidden=true; } }));
+$("nextBtn").onclick=()=>{ SND.tap(); closeCard(); };
+$("speakBtn").onclick=()=>speak(cardWord);
+document.addEventListener("keydown", e=>{ if(e.key!=="Escape") return; if(!$("sheet").hidden) closeCard(); else $("wordsSheet").hidden=true; });
+
+const ICON_ON='<svg viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></svg>';
+const ICON_OFF='<svg viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M17 9l5 6M22 9l-5 6"/></svg>';
+function drawSound(){ const b=$("sound"); b.innerHTML=soundOn?ICON_ON:ICON_OFF; b.setAttribute("aria-pressed",soundOn); b.setAttribute("aria-label",soundOn?"كتم الصوت":"تشغيل الصوت"); }
+$("sound").onclick=()=>{ soundOn=!soundOn; try{ localStorage.setItem("lawh-sound",soundOn?"on":"off"); }catch(e){} drawSound(); SND.tap(); };
+
+$("streak").onclick=()=>{ SND.tap(); const s=liveStreak();
+  msg(streak.day===today() ? `سلسلتك ${AR_NUM(s)} يوم. أحسنت!` : (s ? `ابنِ كلمةً اليوم لتصل سلسلتك إلى ${AR_NUM(s+1)}` : "ابنِ كلمةً كلَّ يوم لتبدأ سلسلة")); };
+// start on the highest open level the player hasn't finished
+level = [...LEVELS].reverse().find(n=>isOpen(n)) || 2;
+drawSound(); newClue(); drawAll();
+</script>
+
+</body>
+</html>
