@@ -1,7 +1,10 @@
 name: Build APK
 on:
   push:
+    branches: [main]
   workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,7 +16,14 @@ jobs:
           java-version: 17
       - uses: gradle/actions/setup-gradle@v4
       - run: chmod +x gradlew && ./gradlew assembleRelease
+      - run: cp app/build/outputs/apk/release/app-release.apk LawhAlHuruf.apk
       - uses: actions/upload-artifact@v4
         with:
           name: lawh-al-huruf-apk
-          path: app/build/outputs/apk/release/*.apk
+          path: LawhAlHuruf.apk
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="v1.0-build${{ github.run_number }}"
+          gh release create "$TAG" LawhAlHuruf.apk --title "لوح الحروف $TAG" --notes "Tap LawhAlHuruf.apk to download, then open it to install." --latest
